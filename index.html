@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#102844">
+<meta name="description" content="梁昆淼《力学》上册第四至七章。29 节、145 道综合计算题与示意图、逐步解答。">
+<title>力学演算室｜梁昆淼《力学》上册综合题</title>
+<style>
+:root{color-scheme:light;--ink:#142b44;--muted:#4d6276;--blue:#2458aa;--deep:#102844;--ice:#e9f0f9;--paper:#fff;--back:#f3f6fa;--line:#d5e0ec;--orange:#ffbe73;--green:#286747;font-family:"Noto Sans SC","Microsoft YaHei UI","PingFang SC",system-ui,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--back);color:var(--ink);line-height:1.65}button,input{font:inherit}button,a,summary{-webkit-tap-highlight-color:transparent}a{color:inherit}button{cursor:pointer}button:disabled{cursor:default}button,input{color:var(--ink)}:focus-visible{outline:3px solid #c3530a;outline-offset:4px}[hidden]{display:none!important}.skip{position:fixed;top:10px;left:14px;z-index:5;transform:translateY(-150%);padding:8px 12px;background:#fff}.skip:focus{transform:none}.wrap{width:min(1300px,calc(100% - 56px));margin-inline:auto}
+.mast{background:#0c2038;color:#f3f7fc}.mast .wrap{display:flex;align-items:center;justify-content:space-between;min-height:61px;gap:12px}.brand{text-decoration:none;display:inline-flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.09em}.brand svg{width:25px;height:25px;display:block}.mast small{font-size:.78rem;color:#ccdbed}
+.hero{background:#102844;color:#fff;border-bottom:4px solid var(--orange)}.hero .wrap{min-height:255px;display:grid;grid-template-columns:1.15fr 1fr;align-items:center;gap:28px}.scope{color:#c2d6ed;font-size:.86rem;margin:0 0 6px;letter-spacing:.08em}.hero h1{font-size:clamp(2.35rem,6vw,4.7rem);line-height:1.13;margin:0 0 15px;letter-spacing:.06em;font-weight:850}.hero p:last-child{color:#e2eaf6;margin:0;font-size:.95rem}.hero-art{height:235px;width:100%;display:block;max-width:535px;justify-self:end}
+.bar{background:#fff;border-bottom:1px solid var(--line)}.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:67px}.bar-stats{display:flex;gap:14px;align-items:center;font-size:.84rem;color:var(--muted)}.bar-stats strong{font-variant-numeric:tabular-nums;color:var(--ink)}.search{display:flex;align-items:center;gap:8px;position:relative;width:min(400px,100%)}.search svg{position:absolute;left:12px;width:16px;pointer-events:none}.search input{width:100%;padding:8px 10px 8px 35px;border:1px solid #b6c7db;background:#fafcfe;border-radius:6px;font-size:.87rem}
+.layout{display:grid;grid-template-columns:248px minmax(0,1fr);gap:28px;align-items:start;padding-top:30px;padding-bottom:60px}.sidebar{background:white;border:1px solid var(--line);border-radius:8px;position:sticky;top:16px;max-height:calc(100dvh - 32px);overflow:auto}.side-title{margin:0;padding:13px 17px;border-bottom:1px solid var(--line);font-size:1rem}.chapter-nav{margin:0;border-bottom:1px solid var(--line)}.chapter-nav:last-child{border:0}.chapter-nav summary{cursor:pointer;font-size:.84rem;font-weight:750;padding:12px 12px;color:var(--ink)}.chapter-nav nav{display:grid;padding:0 6px 9px;gap:2px}.section-link{display:grid;grid-template-columns:34px 1fr;align-items:start;gap:6px;text-decoration:none;font-size:.79rem;line-height:1.4;padding:8px;border-radius:4px}.section-link span:first-child{color:#4b6280;font-variant-numeric:tabular-nums}.section-link:hover,.section-link[aria-current="location"]{background:var(--ice);color:#15488f}.section-link[aria-current="location"]{font-weight:750}.mobile-menu{display:none;border:1px solid #a8bdd5;padding:7px 12px;background:var(--paper);border-radius:5px}.sheet{min-width:0}.section-head{padding:5px 0 17px;border-bottom:2px solid #4671ac;margin:0 0 15px}.section-head p{margin:0;color:var(--muted);font-size:.83rem}.section-head h2{margin:4px 0 6px;line-height:1.25;letter-spacing:.01em;font-size:clamp(1.42rem,3vw,2.15rem)}.coverage{margin:8px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px;list-style:none}.coverage li{font-size:.76rem;padding:2px 9px;border:1px solid var(--line);background:#e8eff8;border-radius:4px}
+.exercise{margin:0 0 13px;background:var(--paper);border:1px solid var(--line);border-radius:8px;overflow:hidden;scroll-margin-top:14px}.exercise[open]{border-color:#a6bdd8}.exercise>summary{display:grid;grid-template-columns:56px 1fr auto;align-items:center;padding:13px 16px;gap:13px;cursor:pointer;list-style:none}.exercise>summary::-webkit-details-marker{display:none}.exercise>summary:hover{background:#f4f8fd}.exercise[open]>summary{border-bottom:1px solid var(--line);background:#f6f9fd}.number{font-size:.8rem;letter-spacing:.03em;font-weight:750;color:#2458aa}.exercise h3{margin:0;line-height:1.45;font-size:1.02rem}.topics{display:block;color:var(--muted);font-size:.74rem;margin-top:2px}.chev{width:10px;height:10px;border-right:2px solid #3c5777;border-bottom:2px solid #3c5777;transform:rotate(45deg);margin-right:5px}.exercise[open] .chev{transform:rotate(225deg)}.checkmark{color:var(--green);font-size:.78rem;font-weight:750;margin-left:8px}.problem-body{padding:18px 20px 20px}.problem-grid{display:grid;grid-template-columns:1fr minmax(245px,.96fr);gap:22px;align-items:start}.statement{margin:0;line-height:1.9;overflow-wrap:anywhere}.problem-meta{margin:5px 0 8px;color:var(--muted);font-size:.76rem}figure{margin:0;border:1px solid var(--line);background:#f2f7fd;border-radius:6px;overflow:hidden}figure svg{display:block;width:100%;height:auto}figcaption{display:flex;flex-wrap:wrap;gap:3px 9px;line-height:1.5;padding:7px 10px 9px;border-top:1px solid var(--line);font-size:.72rem;color:#304968}figcaption span{display:inline-flex;align-items:baseline;gap:4px}figcaption b{font-size:.68rem;color:#254d81}
+.answer{border-top:1px solid var(--line);margin-top:17px}.answer summary{width:fit-content;color:#154d99;cursor:pointer;padding:9px 0;font-weight:750;font-size:.9rem}.answer ol{line-height:1.9;margin:0 0 14px;padding-left:26px;max-width:82ch}.answer li{padding-left:4px;margin-block:4px;overflow-wrap:anywhere}.answer li::marker{font-weight:750;color:#2458aa}.actions{display:flex;justify-content:flex-end}.done{border:1px solid #a3b8d1;border-radius:5px;padding:6px 11px;background:#fff;font-size:.79rem}.done[aria-pressed="true"]{background:#e6f4ec;color:#1d593c;border-color:#96bea8}.pagination{display:flex;justify-content:space-between;gap:10px;margin-top:20px}.pagination a{text-decoration:none;color:#194b91;font-size:.82rem;border:1px solid var(--line);padding:8px 11px;background:#fff;border-radius:5px}.pagination a:hover{background:var(--ice)}.result-section{color:var(--muted);font-size:.76rem;margin:0 0 3px 7px}.empty{background:#fff;padding:15px;border:1px solid var(--line);border-radius:5px}.foot{border-top:1px solid var(--line);color:var(--muted);font-size:.78rem;padding:17px 0 27px}.foot p{margin:0}
+@media(max-width:1000px){.wrap{width:min(100% - 36px,1300px)}.layout{grid-template-columns:212px minmax(0,1fr);gap:19px}.problem-grid{grid-template-columns:1fr}.problem-grid figure{width:min(100%,480px)}}
+@media(max-width:720px){.wrap{width:calc(100% - 28px)}.mast .wrap{min-height:53px}.mast small{display:none}.hero .wrap{min-height:175px;grid-template-columns:1fr 37%;gap:1px}.hero-art{height:auto}.hero .scope{font-size:.71rem;letter-spacing:.01em}.hero h1{font-size:clamp(1.85rem,7.8vw,3rem);margin-bottom:8px}.hero p:last-child{font-size:.75rem}.bar .wrap{gap:8px;flex-wrap:wrap;padding:9px 0}.search{width:100%}.bar-stats{gap:12px}.mobile-menu{display:block}.layout{display:block;padding-top:18px}.sidebar{display:none;position:static;max-height:min(52vh,360px);margin-bottom:14px}.sidebar[data-open="true"]{display:block}.section-head{padding-bottom:12px}.exercise>summary{grid-template-columns:42px 1fr 12px;gap:6px;padding-inline:11px}.exercise h3{font-size:.94rem}.number{font-size:.72rem}.problem-body{padding:14px 13px}.problem-grid{gap:13px}.pagination a{max-width:48%;font-size:.77rem}.answer ol{padding-left:21px}}
+@media print{.mast,.hero,.bar,.sidebar,.pagination,.actions,.foot,.skip{display:none}.wrap{width:100%}.layout{display:block;padding:0}.exercise{break-inside:avoid}.problem-grid{display:block}.problem-grid figure{max-width:400px}.exercise:not([open]){display:none}body{background:white}}
+</style>
+</head>
+<body>
+<a class="skip" href="#sheet">跳到题目</a>
+<header class="mast"><div class="wrap"><a class="brand" href="#s26"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M4 24h22M5 23V6m2 14 14-11m-5 0h5v5" fill="none" stroke="#ffbe73" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="16" r="2.5" fill="#f5f9ff"/></svg>力学演算室</a><small>梁昆淼《力学》上册 · 第四版</small></div></header>
+<section class="hero">
+<div class="wrap"><div><p class="scope">梁昆淼《力学》上册 · 第四至第七章</p><h1>力学演算室</h1><p>从动量定理到波的干涉，按节做综合计算题。</p></div>
+<svg class="hero-art" viewBox="0 0 500 234" aria-hidden="true">
+<defs><pattern id="grid" width="19" height="19" patternUnits="userSpaceOnUse"><path d="M19 0H0V19" fill="none" stroke="#44617e" stroke-width=".5"/></pattern><marker id="hero-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="m0 0 6 3-6 3" fill="none" stroke="#ffbe73"/></marker></defs>
+<rect x="28" y="22" width="438" height="190" rx="2" fill="url(#grid)"/><path d="M49 169H442M116 194V36" fill="none" stroke="#85a5c7" stroke-width="1.4"/><path d="M116 169C172 69 245 48 315 85C357 107 384 136 412 169" fill="none" stroke="#e7f2ff" stroke-width="2.7"/><path d="M293 76v93m0-93H116" fill="none" stroke="#7498bb" stroke-dasharray="5 6"/><path d="M293 76l69 24M293 76v50" fill="none" stroke="#ffbe73" stroke-width="2.3" marker-end="url(#hero-arrow)"/><circle cx="293" cy="76" r="6" fill="#ffbe73"/><circle cx="116" cy="169" r="4" fill="#e4efff"/><circle cx="412" cy="169" r="4" fill="#e4efff"/><g fill="#c4d6eb" font-family="system-ui" font-size="14"><text x="100" y="47">y</text><text x="444" y="174">x</text><text x="99" y="189">O</text></g><g fill="#ffbe73" font-family="system-ui" font-size="14"><text x="367" y="105">v</text><text x="302" y="127">g</text></g>
+</svg></div>
+</section>
+<div class="bar"><div class="wrap"><div class="bar-stats"><span><strong>29</strong> 节 · <strong>145</strong> 题</span><span>已完成 <strong id="total-done">0</strong> 题</span></div><button class="mobile-menu" id="menu" aria-expanded="false" aria-controls="sidebar">章节目录</button><div class="search"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.65"/><path d="m13 13 4 4" stroke="currentColor" stroke-width="1.65"/></svg><input id="search" type="search" aria-label="搜索全部题目" placeholder="搜索全部题目，如「碰撞」「群速」"></div></div></div>
+<div class="layout wrap"><aside class="sidebar" id="sidebar" aria-label="章节目录"><h2 class="side-title">章节目录</h2><div id="navigation"></div></aside><main class="sheet" id="sheet" tabindex="-1"><noscript><p>请启用 JavaScript 以浏览题目、示意图和解答。</p></noscript></main></div>
+<footer class="foot"><div class="wrap"><p>节次与页码按梁昆淼《力学》上册第四版编排。习题、示意图与解答为本题库编写。</p></div></footer>
+<script>
+const chapters = [{"number":4,"title":"质点动力学的运动定理","sections":[{"number":26,"title":"动量定理","page":142,"coverage":["动量与冲量","变力的时间积分","矢量形式","平均力与分段作用"],"problems":[["冲量计上的三角脉冲","变力·平均力","pulse",["力 F / N","时间 t / s","0","0.06","0.12","峰值 90 N"],"0.60 kg 小车向右以 4.0 m/s 进入缓冲器。缓冲器向左的力在 0.12 s 内从 0 线性升至 90 N 再降回 0，峰值位于中点。求冲量、平均力、离开速度及首次停下时刻。",["取向右为正，两段三角形总面积给出 J = −90×0.12/2 = −5.4 N·s，平均力为 J/0.12 = −45 N。","由 mv₁ = mv₀ + J，得 v₁ = 4 − 5.4/0.60 = −5.0 m/s，向左。","上升段 Fₓ = −1500t，累计冲量为 −750t²。令 2.4 − 750t² = 0，得 t = 0.0566 s，小于峰值时刻。"]],["冰面小车的二维推力","矢量冲量·速率极小","axis",["x","y","初动量 4 N·s","Fₓ 随 t 增大","Fᵧ = 3 N"],"2 kg 质点初动量为 (4,0) N·s。在 0≤t≤3 s，合力分量为 Fₓ=−2t，Fᵧ=3（SI）。求 3 s 后的速度、合冲量和全程最小速率。",["积分各分量，J(t)=(−t²,3t)，p(t)=(4−t²,3t)。所以 J(3)=(−9,9) N·s，v(3)=(−2.5,4.5) m/s。","速率平方为 [(4−t²)²+9t²]/4 = (16+t²+t⁴)/4。其在正时间严格增大，最小值出现在 t=0，为 2 m/s。"]],["雨滴进入线性阻力区","微分形式·终端速率","vertical",["雨滴 m","向下 v","向上 bv","重力 mg"],"质量 0.020 kg 的滴体由静止开始下落，阻力大小 0.10v N，g=10 m/s²。求速度、达到终端速率 90% 的时刻和此前阻力的冲量。",["取向下为正，由 m dv/dt = mg−bv，令 τ=m/b=0.20 s、v∞=mg/b=2 m/s。积分得 v=2(1−e^(−5t))。","令 e^(−5t)=0.1，得 t=ln10/5=0.461 s。","阻力冲量等于总冲量减重力冲量，为 0.020×1.8−0.20×0.461 ≈ −0.0561 N·s。"]],["折角导轨的匀速转向","冲量方向·时间平均","bend",["入口 +x","出口 +y","半径 R","速率 v","圆心 O"],"3 kg 小滑块以 4 m/s 匀速通过半径 2 m 的四分之一光滑弯轨，速度从 +x 转为 +y。求通过时间、合冲量、平均合力和瞬时合力大小。",["弧长为 πR/2=π m，因此 Δt=π/4 s。","J=m(v₂−v₁)=(−12,12) N·s，平均合力为 (−48/π,48/π) N，大小 48√2/π N。","瞬时合力沿半径指向圆心，大小 mv²/R=24 N。不同方向的力相加后，平均力的大小小于 24 N。"]],["变力制动与反向推送","分段冲量·动量过零","track",["小车 5 kg","+x","先制动","再向右推"],"5 kg 滑车初速度 3 m/s。0–2 s 内合力 Fₓ=−10t，之后连续 2 s 施恒力 +4 N。求两个动量过零时刻、末速度及净冲量。",["第一段 p=15−5t²，首次归零 t=√3 s，p(2)=−5 N·s。","第二段 p=−5+4(t−2)，再次归零 t=3.25 s，p(4)=3 N·s，末速度 0.60 m/s。","总冲量由两段相加 −20+8=−12 N·s，与 3−15 一致。"]]]},{"number":27,"title":"动量矩定理","page":144,"coverage":["对点与对轴的力矩","角动量","角冲量","零力矩与守恒"],"problems":[["离轴点受二维力","叉积·轴投影","axis",["x","y","位置 r","冲量 J","原点 O"],"2 kg 质点在时刻 t 的位置为 (2,−1,3) m，速度 (1,4,0) m/s，合力 (3,0,−2) N。求对 O 的角动量、力矩及沿单位轴 (1,0,1)/√2 的投影。",["动量 p=(2,8,0) kg·m/s。叉积 L=r×p=(−24,6,18) kg·m²/s。","力矩 M=r×F=(2,13,3) N·m，等于 dL/dt。","点乘轴向单位矢量得 L轴=−6/√2 kg·m²/s，M轴=5/√2 N·m。力矩的轴分量只取平行于该轴的分量。"]],["有切向推力的环上滑块","角冲量·约束力","orbit",["滑块 m","圆心 O","半径 0.50 m","切向力 4t"],"2 kg 质点沿水平光滑圆轨道运行，R=0.50 m，初切向速率 1.0 m/s，另受同向切向力 F=4t N。求 2 s 时角动量、速率、法向合力，并求转角。",["轨道法向力过圆心，M_z=RF=2t。L_z(0)=mRv₀=1，L_z(t)=1+t²。","v=L/(mR)=1+t²，故在 2 s 时 L=5 kg·m²/s，v=5 m/s，径向合力 mv²/R=100 N。","ω=v/R=2(1+t²)，积分得 Δθ=2(2+8/3)=28/3 rad。"]],["收线孔改变回转速度","轴角动量守恒·能量","orbit",["滑块 m","穿线孔 O","初半径 0.80 m","终半径 0.40 m"],"桌面上 0.50 kg 小球由穿过中心孔的细线牵引。初末均可视为瞬时径向速度为零，初半径 0.80 m、切向速度 3 m/s，末半径 0.40 m。求末切向速度、两瞬时角速度和细线所做净功。",["张力沿半径，绕竖直轴的力矩为零。m r₁v₁=m r₂v₂，得 v₂=6 m/s。","ω₁=3/0.80=3.75 rad/s，ω₂=6/0.40=15 rad/s。","重力和支持力不做功，W线=ΔK=0.25(36−9)=6.75 J。末动能增加与角动量守恒相容。"]],["斜掠弹丸与两参照点","参考点平移·力矩","projectile",["初速 v₀","原点 O","水平 x","竖直 y"],"质量 0.20 kg 的质点自 O 以 (6,8) m/s 抛出，g=10 m/s²。取 P=(2,0) m，求 t=1 s 时对 O、P 的角动量，及对 P 的瞬时力矩。",["t=1 时 r=(6,3) m、p=(1.2,−0.4) N·s。","L_O=6(−0.4)−3(1.2)=−6 kg·m²/s，L_P=4(−0.4)−3(1.2)=−5.2 kg·m²/s。","重力 (0,−2) N，M_P=4(−2)=−8 N·m，均按逆时针为正。"]],["两次短促冲量改轨","角动量跳变·中心力","orbit",["中心 O","点 A (2","0)","点 B (0","3)","切向短冲量"],"质点对 O 的初始角动量为 3 kg·m²/s。只受中心力的运动中，在 A=(2,0) m 得冲量 (−1,2) N·s，在 B=(0,3) m 得冲量 (2,1) N·s。求两段之后的 L_z 与 B 点的末切向动量。",["中心力段 M=0。A 处 ΔL_z=2×2=4，故 L_z=7 kg·m²/s。","B 处 ΔL_z=−3×2=−6，故末 L_z=1 kg·m²/s。","在 B 处，逆时针切线指向 −x，pθ=L_z/r=1/3 kg·m/s，所以末 pₓ=−1/3 kg·m/s。冲量的径向分量不会改变 L_z。"]]]},{"number":28,"title":"功","page":151,"coverage":["变力线积分","力与位移夹角","分段路径","合力功与参考系"],"problems":[["曲线导轨上的混合力场","曲线积分·路径依赖","path",["O (0","0)","终点 (2","4)","抛物线 y=x²","折线路线"],"质点由 O 到 (2,4) m，力 F=(3y,2x)（SI）。比较沿抛物线 y=x² 与先走水平、再走竖直折线的功，再求沿反向抛物线返回的功。",["沿抛物线 dy=2x dx，dW=(3x²+4x²)dx，积分得 56/3 J。","折线水平段 y=0 且 dy=0，功为零，竖直段 x=2，W=∫₀⁴4dy=16 J。","反向积分上下限交换，功为 −56/3 J。折线去、曲线回，净功 −8/3 J，表明该力场有路径依赖。"]],["粗糙斜面的往返","重力功·摩擦功","ramp",["斜面 30°","沿面 L=4 m","滑块 3 kg","往返"],"3 kg 滑块沿 30° 直斜面上移 4 m，随后沿同一路线下移 4 m。动摩擦因数 0.20，g=10 m/s²。上行时有水平向坡内的推力 20 N，下行撤去。分别求每段重力、摩擦和推力的功。",["重力沿坡分量大小 15 N，上行做 −60 J，下行做 +60 J。","上行 N=mg cos30°+20 sin30°=15√3+10 N，摩擦功 −0.20N×4=−(12√3+8) J。下行 N=15√3，摩擦功 −12√3 J。","水平推力只在上行做功，W=20×4 cos30°=40√3 J。"]],["绳端移动与球的做功","点积·移动约束","orbit",["球 m","圆心 O","半径 R","圆轨道随平台平移"],"一水平圆轨道以 2 m/s 沿 +x 匀速平移。质点相对轨道以 3 m/s 沿 R=1 m 的圆逆时针运动，质量 2 kg。求轨道法向力在质点相对圆心由 +x 轴至 +y 轴时，在地面系与平台系的功。",["平台系为惯性系，法向力 F=−18(cosθ,sinθ) N。相对位移为切向，故平台系 W′=0。","地面位移多出 U dt，且 dt=dθ/3。W=∫₀^(π/2) −18cosθ×2/3 dθ=−12 J。","用地面动能复核，初、末速度分别 (2,3) 与 (−1,0) m/s，ΔK=1−13=−12 J。"]],["径向拉力与绕行路径","极坐标·线积分","orbit",["起点 r=1 m","终点 r=3 m","径向力 A/r²","切向力 B/r"],"平面力场为 Fᵣ=12/r²、Fθ=3/r（SI）。从 (r=1 m,θ=0) 沿曲线 r=1+2θ/π 到 (3 m,π)，求两分量的功、合功及在 r=3 m 绕行一周的功。",["极坐标微元 dr⃗=eᵣdr+eθr dθ。故径向功为 12∫₁³ r⁻²dr=8 J。","切向功为 3∫₀^π dθ=3π J，合功 8+3π J。","定半径一周时 dr=0，合功 3×2π=6π J。给定两端点时，绕行次数仍会影响总功。"]],["两根非线性弹性绳","分段积分·松弛区","track",["左固定点 x=0","滑块 x","右固定点 x=6","绳原长 2 m"],"滑块沿 x 轴由 x=1 m 到 x=5 m。两端各连一根原长 2 m 的弹性绳，拉伸 δ 时拉力是 3δ² N，松弛时为零。另有恒力 −2 N。分段求两绳各自的功和合功。",["左绳在 x>2 时绷紧，力为 −3(x−2)²，功 −[(x−2)³]₂⁵=−27 J。","右绳在 x\u003c4 时绷紧，力为 +3(4−x)²，功 [−(4−x)³]₁⁴=27 J。","恒力功 −2×4=−8 J，两绳功相消，合功 −8 J。"]]]},{"number":29,"title":"势能","page":156,"coverage":["保守场","零势能参考","由力积分","由势能求力","惯性力势能"],"problems":[["二维耦合势阱","负梯度·路径无关","axis",["x","y","A (1","0)","B (2","1)","力场 F"],"粒子势能 U=2x²+3y²−4xy（SI）。求力场、A(1,0) 至 B(2,1) 的功及平衡点。用先水平后竖直的线积分复核。",["F=(−4x+4y,−6y+4x)。令两分量均为零，得平衡点 (0,0)。","U_A=2 J，U_B=3 J，W=U_A−U_B=−1 J。","沿 y=0 的水平段 ∫₁²−4x dx=−6 J，沿 x=2 的竖直段 ∫₀¹(8−6y)dy=5 J，和为 −1 J。"]],["有限距离上的引力势差","势能零点·径向积分","orbit",["中心体 M","半径 R","3R","无穷远"],"质点在中心引力 Fᵣ=−K/r² 中，K=24 N·m²。若以 r=2 m 为零势能点，求 r=1 和 3 m 的势能、由 1 至 3 m 的引力功和无穷远的势能。",["由 U(r)−U(2)=−∫₂ʳFᵣdr，得 U=24(1/2−1/r) J。","U(1)=−12 J，U(3)=4 J，W=−16 J。","r→∞ 时 U→12 J。若改用无穷远为零，所有势能同减 12 J，势能差仍为 16 J。"]],["加速支架上的弹簧","平动惯性力势能·平衡","spring",["支架向右 a","平衡参考 x=0","劲度 k","物块 m"],"2 kg 滑块在无摩擦水平支架上连到原长零点 x=0 对应的弹簧，k=50 N/m。支架恒向右加速 3 m/s²。求支架系有效势能、平衡位置和 x 从 0 至平衡点的势能变化。",["支架系惯性力为 −ma=−6 N，因此取 U惯=6x。总 U=25x²+6x，零点取 x=0。","令 dU/dx=50x+6=0，得 xₑ=−0.12 m；二阶导数 50>0。","U(xₑ)−U(0)=25×0.0144−0.72=−0.36 J，合有效力做正功 0.36 J。"]],["旋转横槽的有效势阱","离心惯性势能·阈值","orbit",["转轴 O","横槽","角速度 Ω","滑块 r"],"水平槽绕竖轴以 Ω=3 rad/s 匀速旋转。质量 2 kg 的粒子只能沿槽径向滑动，同时受向原点的弹簧力 −30r N；取 U(0)=0。求有效势能和临界 Ω，并求从 r=0.20 m 移到 0.60 m 的有效合力功。",["离心力为 mΩ²r，势能为 −mΩ²r²/2；科里奥利力垂直槽。","有效势能为 (30−2×9)r²/2=6r² J，刚度为零时 Ω_c=√15 rad/s。","有效力做功 U(0.20)−U(0.60)=6(0.04−0.36)=−1.92 J。"]],["双稳态机构的能垒","由势能求力·稳定性","well",["左阱 x=−1","峰顶 x=0","右阱 x=1","能垒 2 J"],"x 为以米表示的数值时，U(x)=2(x²−1)² J。求力随 x 的关系、所有平衡点类型、质点质量 1 kg 时从左阱底越过中央的速率阈值。",["Fₓ=−dU/dx=−8x(x²−1) N。令 Fₓ=0 得 x=−1,0,1 m。","U″=24x²−8，±1 m 处为稳定最低点，0 处为不稳定极大点。","能垒 2 J。由 (1/2)mv²=2 得临界 v=2 m/s，有限时间越过需要 v>2 m/s。"]]]},{"number":30,"title":"动能与动能定理","page":160,"coverage":["动能与速度","合功定理","变力积分","速度位置关系"],"problems":[["弯轨上的发动机与阻力","切向力·速度平方","bend",["入口 v₀","出口 B","弧长 s","切向推力"],"4 kg 小车沿固定光滑弯轨运动，附加切向驱动力 F=16−2s（N），切向恒阻力 4 N，s 以米计。初速 2 m/s。求 s=5 m 的速率、速率最大值和停下位置。",["法向力不做功。K=K₀+∫₀ˢ(12−2s)ds=8+12s−s² J。","s=5 时 K=43 J，v=√(43/2)≈4.64 m/s。K 对 s 的导数在 s=6 归零并变号，Kmax=44 J，vmax=√22 m/s。","令 K=0，沿程正根 s=6+2√11≈12.63 m。"]],["恒斜率加速的竖直拉升","合功·正负号","vertical",["物块 3 kg","上拉 48−2y","重力 30 N","上移 y"],"质点质量 3 kg，初速 2 m/s 向上，受竖直上拉力 F=48−2y（SI），g=10 m/s²。求上升 4 m 时的速率，以及该模型延续时可达到的最高点。",["重力功 −30y，拉力功 48y−y²，合功 18y−y²。","K(y)=6+18y−y²。y=4 时 K=62 J，v=√(124/3)≈6.43 m/s。","最高点取 K=0 的正根 y=9+√87≈18.33 m，此处拉力仍为正且合力向下。"]],["黏性阻力下的行程","动能微分式·分离变量","track",["物块 m","v₀=8 m/s","阻力 −bv","距离 x"],"水平面上 2 kg 滑块初速 8 m/s，只受 Fₓ=−4v。用动能定理求 v(x)、减到 2 m/s 的行程和最终位移极限。",["dK/dx=mv dv/dx=−4v。在 v>0 区间消去 v，dv/dx=−2 s⁻¹，得 v=8−2x。","v=2 时 x=3 m，x 的极限为 4 m。","由 dx/dt=v 可得 x=4(1−e^(−2t))，达到 4 m 需要无限时间。"]],["由测速点反推阻力","逆问题·平均功","track",["A v=10 m/s","B v=6 m/s","距离 8 m","水平推力 6 N"],"质量 2 kg 的车从 A 到 B 走 8 m，速度从 10 降至 6 m/s。推力恒为 6 N，阻力大小模型为 a+bs，且 b=0.50 N/m。求 a、平均阻力和途中速率降至 8 m/s 的位置。",["ΔK=36−100=−64 J，推力功 48 J，阻力功 −112 J，平均阻力 14 N。","8a+(0.50/2)8²=112，得 a=12 N。","K(s)=100−6s−0.25s²。令 K=64，取正根 s=−12+12√2≈4.97 m。"]],["线性提高的制动力","停止距离·功分配","track",["制动入口","滑块 4 kg","末端 v=0","距离 s"],"4 kg 小车以 7 m/s 进入制动区。制动力大小 10+4s N，另有与行进同向的恒力 6 N。求停止位置、制动力与恒力各自做功以及 s=3 m 时的速率。",["初动能 K₀=98 J，合功 W=−4s−2s²。令 K₀+W=0，正根为 s=−1+√50≈6.07 m。","用 s* 表示该距离，制动力功为 −10s*−2s*²≈−134.4 J，恒力功为 6s*≈36.4 J。","s=3 时 K=68 J，v=√34≈5.83 m/s。"]]]},{"number":31,"title":"机械能守恒定律","page":162,"coverage":["保守力做功","动势能转化","约束条件","转折点"],"problems":[["竖直圆环的最低放手高度","能量守恒·接触条件","loop",["入口 A","半径 R=1.2 m","顶端 B","起点高度 h"],"小块自高度 h 静止下滑并进入内侧圆环，R=1.2 m，轨道光滑，g=10 m/s²。求能保持接触过顶的最小 h，并求 h=3.6 m 时顶端速率和法向力与重力之比。",["能量守恒给出顶端 v_B²=2g(h−2R)。顶端向心方程 N+mg=mv_B²/R。","接触要求 N≥0，合得 h≥5R/2=3.0 m。这时顶端要求最严格，因为 N/m=v²/R−g cosθ（θ 从顶端量）随高度增加而降低。","h=3.6 m 时 v_B=√24 m/s，N/(mg)=24/(1.2×10)−1=1。"]],["竖直弹簧接住自由落体","合势能·速度峰值","vertical",["物体 2 kg","自由落下 h=0.40 m","弹簧 k","压缩 x"],"2 kg 物块从未压缩弹簧上方 0.40 m 静止落下，k=200 N/m，g=10 m/s²，忽略损耗。求最大压缩、最大速率及对应位置。",["以刚接触处为 y=0，压缩量 x 向下。能量式 K=mg(h+x)−kx²/2=8+20x−100x²。","令 K=0，物理正根 x=(20+60)/200=0.40 m。","K 的极大点为 x=mg/k=0.10 m，K=9 J，v=3 m/s。自由落体段的速度不超过接触速率 √8 m/s。"]],["光滑轨道与双阱过峰","可达区域·能垒","well",["阱底 ±1 m","中央势垒 3 J","总能量 4 J","两转折点"],"1 kg 质点沿 x 轴运动，U=3(x²−1)² J（以米代入 x），在 x=−1 m 有向右初速 √8 m/s。求过峰速度、最右转折点和 x=0 处加速度。",["总能量 E=4 J，中央 U=3 J，因此过峰速率 √[2(4−3)]=√2 m/s。","转折点满足 (x²−1)²=4/3。负号解 x²=1−2/√3\u003c0，故最右 x=√(1+2/√3)≈1.468 m。","a=−U′/m=−12x(x²−1)，在 x=0 处为 0。"]],["转盘横槽中的自由滑块","旋转参考系·能量积分","orbit",["转轴 O","转速 Ω=2 rad/s","起点 r₀","终点 r₁"],"小块在水平匀速转盘的径向光滑直槽中滑动。Ω=2 rad/s，r₀=0.20 m，相对槽的初速度为 0。求 r=0.50 m 时的径向速度、相对加速度及到达时间。",["离心惯性力有势能 −mΩ²r²/2，科里奥利力、槽侧向力均不做相对功。能量给出 ṙ=Ω√(r²−r₀²)=√0.84≈0.917 m/s。","径向方程 r̈=Ω²r，故终点相对加速度 2 m/s²。","由 r=r₀ cosh(Ωt)，得 t=arcosh(2.5)/2≈0.783 s。"]],["光滑轨道的抛离与落点","能量守恒·局部受力","loop",["球面顶端","半径 R=1.5 m","脱离点 θ","水平地面"],"质点从半径 1.5 m 的固定球面顶端近似静止往下滑，球面光滑，球心在地面平面上，g=10 m/s²。求脱离角、脱离速率、脱离时距地高度和首次落地的水平坐标（球心正下方为 x=0）。",["取 θ 自向上半径量起。v²=2gR(1−cosθ)。","向心方向 mg cosθ−N=mv²/R，脱离时 N=0，故 cosθ=2/3，θ≈48.2°，v=√(2gR/3)=√10 m/s。","脱离高度为 R cosθ=1.0 m。向右滑时脱离位置 x₀=R sinθ≈1.118 m，速度分量为 (v cosθ,−v sinθ)≈(2.108,−2.357) m/s。","落地满足 1−2.357t−5t²=0，取正根 t≈0.270 s，得落点 x≈1.69 m。"]]]},{"number":32,"title":"功能原理","page":167,"coverage":["非保守力总功","机械能变化","损耗","分段能量账"],"problems":[["粗糙坡面接弹簧","摩擦损耗·最大压缩","ramp",["落差 1.0 m","粗糙路径 4 m","水平弹簧 k","压缩 x"],"2 kg 块静止下滑，经恒摩擦力 2 N 的 4 m 坡段后进入水平弹簧区。落差 1 m，g=10 m/s²，弹簧 k=100 N/m，水平段仍受 2 N 摩擦。求入口速率、最大压缩和压缩末端已耗散的能量。",["坡段给出 K入口=mgh−fs=20−8=12 J，v=√12 m/s。","压缩区满足 12=50x²+2x，正根 x=(√601−1)/50≈0.470 m。","总热耗散为 2(4+x)≈8.94 J，其余 50x²≈11.06 J 存入弹簧。"]],["水平传送带加速滑块","摩擦功·热耗散","belt",["带速 5 m/s","滑块 2 kg","初速 1 m/s","滑动摩擦 4 N"],"匀速传送带速度 5 m/s，放入初速同向 1 m/s 的 2 kg 滑块，滑动摩擦 4 N。求共同速度前的时间、对滑块的功及驱动电机补充的能量，核对热量。",["滑块 a=4/2=2 m/s²，追上需要 2 s，滑块位移 (1+5)×2/2=6 m，带面位移 10 m。","摩擦对滑块做功 4×6=24 J，摩擦对带做功 −4×10=−40 J，恒速电机需补 40 J。","相对滑动 4 m，热量 4×4=16 J，正好是电机输入与滑块增能之差。"]],["有驱动力的高度回升","机械能收支·两段路径","ramp",["起点 A","谷底 B","终点 C","两段粗糙"],"3 kg 滑块从 A 静止沿 5 m 斜面跌高 2 m 至 B，动摩擦恒为 4 N。然后沿长 4 m 的坡上升 1.5 m，阻力恒 5 N，驱动力恒 10 N 且沿上坡。g=10 m/s²。求 B、C 的速率及刚能到 C 的最小恒驱动力。",["以 B 为零势，B 点 K=3×10×2−4×5=40 J，v_B=√(80/3) m/s。","B→C 时 K_C=40−45−5×4+10×4=15 J，v_C=√10 m/s。","令 K_C=0，F_min=(45+20−40)/4=6.25 N。直坡和恒力使动能沿路单调降至零。"]],["简谐振子遭遇恒摩擦","每程能量变化·能否返程","spring",["弹簧 k=80 N/m","初位 x₀=0.25 m","摩擦 2 N","平衡点 O"],"1 kg 滑块连弹簧，k=80 N/m，动摩擦力 2 N，最大静摩擦力 2 N。由 x=0.25 m 静止释放，求第一次经过原点的速率、左侧转折点，判断是否反向。",["初总能 E₀=40×0.25²=2.5 J，至 O 损耗 0.50 J，K=2 J，v=2 m/s。","设左侧转折点 x=−A，40A²+2(0.25+A)=2.5。正根 A=0.20 m。","此处弹簧向右力 80×0.20=16 N>2 N，静摩擦不能维持静止，因此反向。"]],["旋转槽中的径向刹车","惯性势能·非保守功","orbit",["圆心 O","角速度 Ω","径向槽","恒阻力 −3 N"],"1 kg 滑块在 Ω=4 rad/s 的水平匀速转台径向槽内外滑，从 r=0.25 m、相对速率 1 m/s 到 r=0.50 m，阻力 3 N。求末速、区间最小速率并核对是否会中途停下。",["旋转系用 U离=−8r²，侧向力与科里奥利力不做功。K=0.5+8(r²−0.25²)−3(r−0.25)=8r²−3r+0.75。","末 K=1.25 J，所以 v=√2.5≈1.58 m/s。","dK/dr=16r−3>0 在全区成立，最小速率是入口 1 m/s，全程保持外滑。"]]]},{"number":33,"title":"功率","page":168,"coverage":["瞬时与平均功率","力和速度的点积","恒功率运动","效率"],"problems":[["恒机械功率与定阻力","功率平衡·速度积分","track",["车 200 kg","恒功率 2.4 kW","阻力 120 N","+x"],"小车质量 200 kg，牵引机械功率恒为 2400 W，阻力恒 120 N。初速 5 m/s。求极限速度、v=10 m/s 时的加速度和从 5 到 10 m/s 的用时。",["牵引力 P/v，故 m dv/dt=P/v−f。极限 v∞=P/f=20 m/s，v=10 时 a=(240−120)/200=0.60 m/s²。","dt=(m/f)v/(20−v)dv，积分得 Δt=(200/120)[20 ln(15/10)−5]≈5.18 s。","此段输入能量 PΔt≈12.4 kJ，瞬时净功率 P−fv 随速度升高而降低。"]],["变速吊装的峰值电功率","瞬时功率·效率","vertical",["吊物 40 kg","上升 v=0.5t²","拉力 T","重力 mg"],"40 kg 物体在 0≤t≤3 s 按 v=0.5t²（SI）竖直上升。机械效率恒为 80%，g=10 m/s²。求峰值电功率、总耗电及平均电功率。",["a=t，T=m(g+t)，故电功率 P电=Tv/0.80=25(10+t)t² W。在区间内递增，峰值 2925 W。","位移 h=∫vdt=t³/6=4.5 m，末速 4.5 m/s。机械功 mgh+mv²/2=1800+405=2205 J。","耗电 2756.25 J，平均功率 918.75 W。"]],["斜拉力作用于平面运动","点积·零功率时刻","axis",["x","y","斜拉力 (6","−3)","速度矢量 v","轨迹"],"受力 F=(6,−3) N 的质点在 0≤t≤4 s 按 v=(2t,4) m/s 运动，另有其他力维持轨迹。求该力的功率函数、累计功以及功率首次为零的时刻。",["该力的瞬时功率 P=F·v=12t−12 W，t=1 s 时归零。","积分 W=[6t²−12t]₀⁴=48 J，平均功率 12 W。","也可直接算位移 Δx=16 m、Δy=16 m，点积 6×16−3×16=48 J。前 1 s 该力做负功。"]],["变坡度公路的功率预算","恒速·切向分解","ramp",["公路 1 km","坡角 5°","车 800 kg","恒速 12 m/s"],"800 kg 小车以 12 m/s 匀速爬 5° 坡 1.0 km，滚动阻力 150 N，空气阻力 0.8v² N，g=10 m/s²。求牵引功率、上坡牵引功及匀速下坡时所需的制动功率。",["上坡重力切向分量 8000 sin5°≈697.25 N，两项阻力共 265.2 N。","牵引力 962.45 N，功率 11.55 kW，牵引功约 962 kJ。","反向下坡时重力助推，需额外反向制动力 697.25−265.2=432.05 N，制动吸收功率约 5.18 kW。"]],["绕定轴带动阻尼轮","转动功率·指数过程","wheel",["圆轮 I=2","恒转矩 12 N·m","阻尼 3ω","转轴 O"],"定轴轮转动惯量 2 kg·m²，从静止在恒驱动力矩 12 N·m 下转动，阻尼矩为 −3ω（SI）。求 ω(t)、稳态驱动功率与 t=2 s 时净功率。",["方程 2ω̇=12−3ω，解得 ω=4(1−e^(−1.5t)) rad/s。","稳态 ω=4，驱动功率 12×4=48 W，等于阻尼吸收功率。","t=2 s 时净功率 (12−3ω)ω=48e^(−3)(1−e^(−3))≈2.27 W，为转动动能的增长率。"]]]},{"number":34,"title":"有心力","page":169,"coverage":["有心力与角动量","面积速度","有效势能","圆轨道与转折点"],"problems":[["反平方引力的圆轨道扰动","有效势·稳定性","orbit",["中心 O","圆轨道 r₀","扰动 δr","角动量 L"],"质量 1 kg 的质点受 Fᵣ=−36/r² N，L=6 kg·m²/s。求圆轨道半径、圆轨道能量和固定 L 的径向小振动角频率。",["U效=L²/(2mr²)−36/r=18/r²−36/r。U效′=−36/r³+36/r²，零点 r₀=1 m。","E圆=18−36=−18 J，轨道切速 L/(mr₀)=6 m/s。","U效″(r₀)=108−72=36 N/m>0，径向小振动 ωᵣ=√(36/1)=6 rad/s。"]],["引力过近点与远点","能量·径向转折","ellipse",["力心 O","近点 rₚ","远点 rₐ","切向速度"],"1 kg 物体在 U=−20/r（SI）中运动，近、远点半径分别为 1 m、4 m。求角动量大小、机械能及近远点速度。",["两转折点 ṙ=0，故 E=L²/2−20=L²/32−5。","相减得 (15/32)L²=15，L=√32 kg·m²/s，代回 E=−4 J。","vₚ=L/(mrₚ)=√32≈5.66 m/s，vₐ=√2≈1.41 m/s，两处速率比 4。"]],["二维各向同性弹性力","面积速度·轨道判别","ellipse",["中心 O","长轴 A","短轴 B","轨道面积"],"2 kg 质点受 F⃗=−8r⃗（SI），初始 r=(3,0) m、v=(0,4) m/s。求轨迹、面积速度、周期和每周期扫过面积。",["各分量满足 ẍ+4x=0，故 x=3 cos2t、y=2 sin2t，轨道为半轴 3 m 与 2 m 的椭圆。","L_z=m x₀vᵧ=24 kg·m²/s，面积速度 L/(2m)=6 m²/s。","周期 π s，一周面积 6π m²，与几何椭圆面积一致。"]],["万有斥力的最近距离","有效势·入射参数","scatter",["入射线 v∞","偏移 b","力心 O","最近距离 rₘ"],"1 kg 粒子从很远处以 4 m/s 入射，入射线与力心垂距 0.75 m，U=3/r（SI）。求最近距离、该处切速和径向加速度。",["E=mv∞²/2=8 J，L=mv∞b=3 kg·m²/s。","转折时 E=4.5/r²+3/r，即 8r²−3r−4.5=0，得 rₘ=(3+√153)/16≈0.961 m。","切速 L/(mrₘ)=3/rₘ≈3.12 m/s，径向坐标加速度 r̈=(9/rₘ³+3/rₘ²)≈13.4 m/s²，向增大 r 的方向。"]],["已知径向律反推近心轨道","有心力基本方程·面积律","orbit",["力心 O","初径向 r₀","径向速度 ṙ","切速 vθ"],"1 kg 质点受 Fᵣ=−10/r² N。在 r=2 m 处，径向外速 1 m/s，切向速率 2 m/s。求角动量、总能量、瞬时角速度、径向坐标加速度。判断是否束缚。",["L=mrvθ=4 kg·m²/s，E=(1²+2²)/2−10/2=−2.5 J，θ̇=L/(mr²)=1 rad/s。","径向坐标方程 r̈−rθ̇²=−10/r²，故 r̈=2−2.5=−0.50 m/s²。","远处 U效→0，E\u003c0 的粒子无法到达无穷远，且 L≠0 产生近心势垒，故为束缚轨道。"]]]}]},{"number":5,"title":"质点系动力学的运动定理","sections":[{"number":35,"title":"质点系动力学的困难所在 两体问题","page":179,"coverage":["内力与外力","质心及相对运动","约化质量","两体逆变换"],"problems":[["自由双星的圆轨道","约化质量·质心反算","binary",["双星 m₁","m₂","质心 C","间距 r=3 m"],"两个点质量为 2 kg、4 kg，相互吸引，间距 r 处力的大小 18/r² N。两者绕静止质心以相同角速度做圆运动，间距 3 m。求各自轨道半径、角速度和动能总和。",["取相对矢量 r=r₂−r₁，M=6 kg，μ=m₁m₂/M=4/3 kg。由质心条件，r₁到质心距离为 (4/6)×3=2 m，另一个为 1 m。","相对方程 μrω²=18/r²，ω²=1/2 s⁻²，所以 ω=1/√2 rad/s。","总动能 K=μr²ω²/2=3 J。也可将两者的转动动能分别相加。"]],["两颗滑块之间的振动","平动和相对运动的分离","binary",["m₁=1 kg","m₂=3 kg","弹簧 k=12","质心 C"],"光滑直线上的两滑块用原长 0.50 m、劲度 12 N/m 弹簧相连。m₁=1 kg，m₂=3 kg。初始位置 (0,0.70) m、速度 (2,2) m/s。求质心运动、两块位置和首次回到原长所需时间。",["M=4 kg，μ=3/4 kg，初质心 X₀=3×0.70/4=0.525 m，无外力，X=0.525+2t。","相对伸长 q=x₂−x₁−0.50 满足 μq̈=−12q，故 q=0.20 cos4t。","x₁=X−(3/4)(0.50+q)，x₂=X+(1/4)(0.50+q)。第一次 q=0 对应 t=π/8 s。"]],["只推双滑块中的一块","外力分配·相对坐标","binary",["左块 2 kg","右块 2 kg","右拉 8 N","弹簧 k=16"],"两块各 2 kg，用原长弹簧连接，k=16 N/m。初始静止，弹簧无形变。仅右块从此受向右恒力 8 N。求质心加速度、弹簧伸长函数和最大伸长。",["整体外力为 8 N，故 Ẍ=8/4=2 m/s²。两块方程相减，伸长 q 满足 q̈=4−16q。","平衡伸长 qₑ=0.25 m，无初伸长和相对初速，故 q=0.25(1−cos4t) m。","最大伸长 0.50 m，首次出现在 t=π/4 s，此时两块速度相等且都为 π/2 m/s。"]],["异速双星在漂移系中接近","质心初值·机械能分离","binary",["左体 2 kg","右体 3 kg","间距 4 m","质心速度"],"m₁=2 kg、m₂=3 kg，沿同一直线，初始相距 4 m，速度各为 +3 和 −1 m/s，势能 U=−24/r（SI）。求质心速度、相对能量和间距缩至 2 m 时两物体的速度。",["V=(6−3)/5=0.60 m/s，μ=6/5 kg，相对初速 −4 m/s。","相对总能 E=μ×16/2−24/4=3.6 J。在 r=2 m 处相对动能 15.6 J，故 ṙ=−√26 m/s。","v₁=V−(3/5)ṙ≈3.66 m/s，v₂=V+(2/5)ṙ≈−1.44 m/s。负号来自两体继续接近。"]],["二维双滑块的质心与内运动","矢量逆变换·动能分解","axis",["x","y","r₁=(1","0)","r₂=(3","4)","质心 C"],"质点 1 kg 与 3 kg 的瞬时位置为 (1,0)、(3,4) m，速度 (4,−2)、(0,2) m/s。求质心位置、速度、相对速度和动能中质心平动的占比。",["质心 (r₁+3r₂)/4=(2.5,3) m，V=(v₁+3v₂)/4=(1,1) m/s，v₂−v₁=(−4,4) m/s。","质心动能 K_C=M V²/2=4 J，相对动能 K_rel=(3/4)×32/2=12 J。","总动能 16 J，其中质心部分占 25%。这种分解无需给出内力的函数。"]]]},{"number":36,"title":"质心运动定理与动量定理","page":183,"coverage":["内力抵消","外冲量","质心轨迹","动量守恒与反冲"],"problems":[["漂浮实验台上的横移","质心守恒·相对位移","track",["浮台 80 kg","行人 60 kg","相对横移 3.5 m","无水平外力"],"80 kg 浮台上有 60 kg 行人，系统初静止。行人相对台向右走 3.5 m，水的水平阻力忽略。求台与人的对地位移，并求人相对台速率为 1.4 m/s 时各自的对地速度。",["设台位移 X，人的对地位移 X+3.5。质心不动，80X+60(X+3.5)=0，得 X=−1.5 m，人位移 +2.0 m。","同样，80V+60(V+1.4)=0，得 V=−0.60 m/s，人速 +0.80 m/s。","内摩擦改变各自的动量，但两者总动量保持为零。"]],["空中分裂后的落点","质心抛物线·冲量分配","projectile",["最高点 H","两碎片","完整系统落点","水平 x"],"6 kg 质点在抛体最高点（高 20 m）速度为水平向右 8 m/s，此刻分成 2 kg、4 kg 两块。轻块获得水平向右速度 20 m/s，两块竖直初速度均为零。g=10 m/s²，求重块速度、两落点和质心落点相对裂点的水平距离。",["分裂时外冲量可忽略。水平动量给出 48=2×20+4v₂，得 v₂=2 m/s。","两块落地时间均为 √(2×20/10)=2 s，水平落点为 40 m 与 4 m。","质心落点为 (2×40+4×4)/6=16 m，等于未分裂时的落点。"]],["二维外冲量作用于滑块系","质点系动量定理·质心速度","axis",["x","y","系统初动量","外冲量 J₁","外冲量 J₂"],"三个滑块总质量 10 kg，初质心速度 (2,−1) m/s。0–2 s 仅受两外推力 (3t,4) N 与 (−2,−t) N。求末动量、质心速度与位移。",["合外力 (3t−2,4−t)，其总冲量 J=(2,6) N·s。末动量 (20,−10)+(2,6)=(22,−4) N·s。","质心速度 V(t)=(2+(1.5t²−2t)/10,−1+(4t−0.5t²)/10)。","积分得到 ΔR=(4,(−2+8/10−(8/6)/10))=(4,−4/3) m，末速度 (2.2,−0.4) m/s。"]],["移动滑台上的分度配重","质心方程·可逆位移","track",["滑台 10 kg","左砝码 2 kg","右砝码 3 kg","台内移动"],"无水平外力，10 kg 台上 2 kg 配重相对台向右移 0.60 m，3 kg 配重相对台向左移 0.20 m。初静止，求台及配重对地位移。之后只让 3 kg 配重再移多少可令台回原位？",["由质心坐标不变，15X+2×0.60−3×0.20=0，X=−0.040 m。","两配重对地位移分别 +0.56 m、−0.24 m。","要令台回原位，内部相对位移的总质量加权和需从 +0.60 kg·m 变为零，故 3 kg 配重再相对左移 0.20 m。"]],["两阶段释放实验载荷","反冲·外冲量","track",["探测小车 9 kg","释放配重 3 kg","相对速度","草坪制动"],"水平小车含配重共 12 kg，初静止。内部弹簧令 3 kg 配重与剩余 9 kg 车体完全分离，配重相对车的速度向右 4 m/s。随后车受恒向右阻力 3 N 直到停下。求分离速度和车的制动时间与距离。",["分离瞬间外冲量忽略，9v车+3(v车+4)=0，故 v车=−1 m/s，v配=+3 m/s。","阻力冲量 3t 必须抵消车的 −9 N·s，得 t=3 s。","匀减速位移为 (−1+0)×3/2=−1.5 m。配重分离后不计入车的受力系统。"]]]},{"number":37,"title":"碰撞","page":192,"coverage":["正碰","斜碰","恢复系数","法切分解","碰撞损失"],"problems":[["正碰中的反弹速度","动量守恒·恢复系数","binary",["A 2 kg","B 3 kg","碰前 +6 与 −1","碰撞线"],"A、B 质量分别为 2、3 kg，沿直线相向，速度为 +6、−1 m/s，恢复系数 e=0.5。求碰后速度、碰撞冲量和机械能损失。",["动量式 2v_A+3v_B=9，恢复式 v_B−v_A=0.5×7=3.5。","联立得 v_A=−0.30 m/s，v_B=3.20 m/s。A 的冲量=2(−0.3−6)=−12.6 N·s，B 的相反。","μ=6/5 kg，损失为 μ(1−e²)×7²/2=22.05 J。"]],["球斜撞光滑墙再落地","斜碰·法切分量","wall",["竖直墙","入射 (−4","3)","反弹","墙距地 1.25 m"],"0.50 kg 光滑球撞左侧竖直墙，碰前速度 (−4,3) m/s，x 向右、y 向上。e=0.75，高度 1.25 m，g=10 m/s²。求碰后速度、冲量和球首次落地距墙的水平距离。",["墙光滑，切向 vᵧ=3 不变，法向 vₓ=−e(−4)=3 m/s。","墙冲量 (0.50×7,0)=(3.5,0) N·s。落地满足 1.25+3t−5t²=0。","正根 t=(3+√34)/10≈0.883 s，水平落距约 2.65 m。"]],["两光滑球的二维斜碰","法向冲量·能量损失","binary",["A 球","B 球","法向 n=(3/5","4/5)","切向 t"],"质量均为 1 kg，A 初速 (5,0) m/s，B 静止。接触法向由 A 指 B，为 n=(3/5,4/5)。e=1/2。求两末速度、B 的散射角和损失。",["相对接近速度 gₙ=(v_A−v_B)·n=3 m/s，冲量大小 j=(1+e)gₙ/(1/m_A+1/m_B)=2.25 N·s。","A 减 jn，B 加 jn，得 v_A′=(3.65,−1.80)，v_B′=(1.35,1.80) m/s。","B 对 +x 的角度为 arctan(4/3)≈53.1°，能量损失 μ(1−e²)gₙ²/2=1.6875 J。"]],["由摆幅反推粘连碰撞","完全非弹性·碰后能量","pend",["摆长 L=1 m","摆锤 0.98 kg","来球 0.02 kg","最高上升 h"],"0.02 kg 小球水平撞入 0.98 kg 静止摆锤并粘合，摆长 1 m，随后升高 0.20 m，g=10 m/s²。求小球初速、碰撞中损失和摆的最大偏角。",["碰后摆动机械能守恒给出 V=√(2gh)=2 m/s。碰撞阶段绕悬点角动量守恒，等效于水平方向动量式 0.02v=1×2，得 v=100 m/s。","碰撞损失为 0.02×100²/2−1×2²/2=98 J。","h=L(1−cosθ)，故 θ=arccos0.8≈36.9°。"]],["从测速数据识别弹性","恢复系数反算·能量核验","track",["球 A 3 kg","球 B 2 kg","初速 +4 与 0","末速 A=1.60"],"一维碰撞中，3 kg 球以 4 m/s 追上静止的 2 kg 球。测得前者碰后速度 1.60 m/s。求另一球末速、恢复系数和能量损失比例。",["动量守恒 12=3×1.60+2v_B，得 v_B=3.60 m/s。","e=(3.60−1.60)/(4−0)=0.50。","初动能 24 J，末动能 (3×1.60²+2×3.60²)/2=16.8 J，损失 7.2 J，占 30%。"]]]},{"number":38,"title":"动量矩定理","page":198,"coverage":["对轴与对点角动量","质心分解","取矩点选择","外力矩和守恒"],"problems":[["绕质心转动的平移哑铃","轨道项·自转项","binary",["两端各 1 kg","质心 C=(2","0)","杆长 2 m","质心向上"],"两颗各 1 kg 的球用 2 m 轻杆连接，质心在 (2,0) m，以 (0,3) m/s 平移，并以 4 rad/s 逆时针转动。此刻轻杆沿 x。求对原点、对质心的角动量，并用逐粒计算核验。",["绕质心 L_C=I_Cω=(2×1×1²)×4=8 kg·m²/s。整体轨道项 R_C×MV_C=2×6=12 kg·m²/s，对原点共 20。","两球 x 分别为 1、3 m，vᵧ 分别为 3−4=−1、3+4=7 m/s。","逐粒相加 1×(−1)+3×7=20 kg·m²/s，与分解一致。"]],["自由转台接住横向滑块","选轴·外角冲量为零","wheel",["转台 I₀=4","入射滑块 2 kg","半径 0.50 m","转轴 O"],"光滑竖轴上的静止转台 I₀=4 kg·m²，一个 2 kg 滑块以 6 m/s 沿距轴 0.50 m 的切线冲入并固定在该半径。求共同角速度、动能损失和转台所受角冲量。",["对轴外力矩为零，L₀=mvb=6 kg·m²/s。末总惯量 I=4+2×0.50²=4.5 kg·m²，ω=4/3 rad/s。","初 K=36 J，末 K=L²/(2I)=4 J，损失 32 J。","盘自身从零增加至 I₀ω=16/3 kg·m²/s，这就是滑块对盘施加的角冲量。"]],["等大反向推力的哑铃","纯力偶·零净力","binary",["左端 A","右端 B","相反切向力 ±6 N","间距 1.5 m"],"刚连在一起的两端质点各 2 kg、间距 1.5 m。两端始终受大小 6 N、方向反向且垂直杆的平面力，形成逆时针力偶，持续 0.50 s，初静止。求质心速度、角动量和转角。",["净外力为零，质心静止。外力矩是力偶矩 6×1.5=9 N·m，对任一点相同。","角冲量为 4.5 N·m·s，因此 L_C=4.5 kg·m²/s。","I_C=2×2×0.75²=2.25 kg·m²，α=4 rad/s²，ω=2 rad/s，转角 (1/2)αt²=0.50 rad。"]],["活动取矩点的修正项","任意移动点·矢量定理","axis",["x","y","移动点 A","总动量 P","位置 r"],"在惯性系中定义 L_A=Σ(rᵢ−r_A)×mᵢvᵢ。某时刻 p总=(10,0,0) N·s，移动点速度 (0,2,0) m/s，对 A 的外力矩为 (0,0,−6) N·m。求 dL_A/dt 并比较以同位置固定点取矩。",["对定义微分，第一项 Σ(vᵢ−v_A)×mᵢvᵢ=−v_A×P，其余为总外力矩，内中心力矩相消。","v_A×P=(0,0,−20) N·m，所以 dL_A/dt=(0,0,14) N·m。","同一时刻固定点的速度为零，导数等于外力矩 (0,0,−6) N·m。若选 A 为质心，v_A 与 P 平行，修正项也为零。"]],["自由实验员调整伸臂半径","角动量守恒·内部做功","orbit",["转台轴 O","两配重 2 kg","初半径 1.0 m","末半径 0.50 m"],"实验员及转台轴惯量恒为 2 kg·m²，两侧各有 2 kg 配重。初半径 1 m，初角速度 2 rad/s。配重收到 0.50 m，初末径向速度均为零。求末角速度与系统的动能增加。",["I_i=2+4×1²=6 kg·m²，I_f=2+4×0.50²=3 kg·m²。轴向外力矩为零，L=12 kg·m²/s 守恒。","ω_f=L/I_f=4 rad/s。","K_i=L²/(2I_i)=12 J，K_f=24 J，增加 12 J，由收臂过程的内部能量转换提供。"]]]},{"number":39,"title":"动能定理","page":203,"coverage":["质点系动能定理","内力功","质心与相对动能","参考系","功能原理"],"problems":[["两滑块弹簧释放","内力总功·质心系","binary",["左块 2 kg","右块 6 kg","压缩 0.20 m","随平台漂移"],"2、6 kg 两块夹着 k=300 N/m 的压缩弹簧，压缩 0.20 m，两块初速均为向右 1 m/s。在光滑面释放后，求弹簧恢复原长且与两块脱离时的各速度和总动能。",["V_C=1 m/s，M=8 kg，μ=1.5 kg。内弹力释放的功为 6 J，质心动能保持 4 J。","相对速度满足 μv_rel²/2=6，得 v_rel=√8 m/s。","左块 v₁=1−(6/8)√8≈−1.12 m/s，右块 v₂=1+(2/8)√8≈1.71 m/s，总动能 10 J。"]],["滑块撞上带缓冲器的移动小车","内能损失·两参考系","track",["滑块 2 kg","小车 4 kg","初速 8 与 2","粘连缓冲"],"2 kg 滑块以 8 m/s 追及 4 kg 车（速度 2 m/s）并粘住。求共同速度和机械能损失，并在速度为 2 m/s 的惯性系中复核。",["共同速度 V=(16+8)/6=4 m/s。地面系初 K=64+8=72 J，末 K=48 J，损失 24 J。","在平移参考系中，初速度为 6 和 0，末均为 2，初 K′=36 J，末 K′=12 J，差仍为 −24 J。","质心动能在各自惯性系中均不变，变化来自相对动能。"]],["两块叠放并发生相对滑动","内摩擦功·参考系","belt",["上块 1 kg","下块 3 kg","下块受 12 N","摩擦 2 N"],"光滑水平面上，1 kg 上块叠在 3 kg 下块上，初静止，现给下块 12 N 恒水平力。整个 1 s 内两块保持接触并相对滑动，滑动摩擦 2 N。求末总动能、两摩擦力总功，并与外力功核对。",["上、下块加速度分别 2 和 10/3 m/s²，1 s 位移为 1 和 5/3 m，末速度为 2 和 10/3 m/s。","K总=2+50/3=56/3 J。外功 12×5/3=20 J，内摩擦总功 2×1−2×5/3=−4/3 J。","热量等于 2×相对滑距 2/3=4/3 J。外功加内功正好等于 ΔK。"]],["给质点系施加同加速度","质心动能与内部能量","binary",["左块 1 kg","右块 3 kg","弹簧 k=40","外力成质量比例"],"质量 1 和 3 kg 滑块用弹簧相连，k=40 N/m，初伸长 0.20 m，两块静止。此后分别受向右恒力 2、6 N。求弹簧第一次恢复原长时的质心速度、相对动能以及系统总动能。",["两外力给出的单位质量加速度均为 2 m/s²，因此相对运动中外力项抵消。μ=0.75 kg，ω=√(40/0.75)，首次恢复原长 t*=π/(2ω)≈0.215 s。","V_C=2t*≈0.430 m/s。相对动能为初弹性势能 40×0.20²/2=0.80 J。","K总=MV_C²/2+0.80≈1.17 J，增加的质心动能来自外力总功。"]],["只有一块受推的双质量储能","外功与内势能·能量收支","binary",["A 2 kg","B 2 kg","弹簧 k=20","B 受力 8 N"],"两个 2 kg 滑块由原长弹簧相连，k=20 N/m，均静止。向右推 B 恒力 8 N。求弹簧第一次伸至 0.20 m 时各速度、外功与动能总和。",["相对方程 q̈+20q=4，故 q=0.20(1−cos√20t)，第一次达到 0.20 m 的时刻 t*=π/(2√20)≈0.351 s。","质心速度 2t*，相对速率 0.20√20；v_A=2t*−0.10√20≈0.255 m/s，v_B≈1.150 m/s。","B 位移为 t*²+0.10，外功约 1.787 J。弹性能 0.40 J，因而总动能约 1.387 J，与两末动能之和一致。"]]]}]},{"number":6,"title":"刚体力学","sections":[{"number":40,"title":"刚体 一种质点系","page":212,"coverage":["刚体定义","六个自由度","质心积分","内力总功为零"],"problems":[["非均匀细杆的质心","线密度积分·平动惯性","beam",["O x=0","杆长 3 m","密度 2+x","端点 B"],"长度 3 m 的细杆线密度 λ=2+x（SI）。求总质量、质心和水平放置时重力对 O 的力矩，g=10 m/s²。",["M=∫₀³(2+x)dx=10.5 kg。关于 O 的一阶质量矩为 ∫₀³x(2+x)dx=18 kg·m。","x_C=18/10.5=12/7 m。","重力力矩按逆时针为正是 −Mgx_C=−180 N·m，与逐元积分一致。"]],["矩形板挖去偏心圆孔","负质量法·质心","plate",["均匀矩形 6×4","孔 Cₕ=(4","2)","半径 1","左下角 O"],"均匀薄板占 0≤x≤6、0≤y≤4（单位 m），挖去圆心 (4,2)、半径 1 m 的孔，面密度 2 kg/m²。求质量、质心与水平放置时重力对通过 x=0 的 y 轴的力矩，g=10 m/s²。",["M=2(24−π) kg。负质量法给出 x_C=(24×3−π×4)/(24−π)≈2.849 m，y_C=2 m。","取 z 向上，重力 F_z=−Mg，故绕 y 轴力矩为 +Mgx_C。","代入得力矩 20(72−4π)≈1188.7 N·m。"]],["三点定刚体姿态","刚体几何·六自由度","axis3",["O","A 初在 +x","B 初在 +y","先转 90° 再平移"],"刚体上三非共线点初坐标 O=(0,0,0)、A=(2,0,0)、B=(0,1,0) m。刚体先绕 z 轴转 +90° 再平移 (1,2,3) m。求三点末坐标、AB 长和完全固定这三点所消除的刚体独立自由度数。",["绕 z 转动的规则为 (x,y,z)→(−y,x,z)，再逐点加平移，得 O′=(1,2,3)、A′=(1,4,3)、B′=(0,2,3) m。","A′B′ 的差向量 (−1,−2,0)，长度 √5 m，等于原值。","O 固定消除 3 个平移自由度，A 固定再消除 2 个转动自由度，B 非共线，消除最后绕 OA 的 1 个自由度，共 6 个。"]],["刚性双球上的张力功","内力功成对抵消","binary",["A","B","杆长恒定 L","轴向张力 5 N"],"刚杆沿 +x 联结 A、B，两端拉力各 5 N，互相指向对方。某瞬间 v_A=(2,−3) m/s，v_B=(2,5) m/s。求两内力的瞬时功率；再用定长条件给出一般矢量证明。",["F_A=(5,0)，F_B=(−5,0) N，P_A=10 W，P_B=−10 W，和为零。","一般地，杆长约束 d|r_B−r_A|²/dt=0，给出 (r_B−r_A)·(v_B−v_A)=0。","总内力功率 F_A·(v_A−v_B) 为零，因为 F_A 平行杆轴。因而两端可能分别做功，但理想刚杆的总内力功为零。"]],["复合刚体静态质心标定","体密度·质量加权","plate",["圆盘 5 kg","C₁=(0","0)","配重 2 kg","C₂=(0.30","0.40)","悬挂点"],"5 kg 圆盘与质心位于 (0.30,0.40) m 的 2 kg 配重刚接。圆盘中心定义为 O，忽略连接件。求合质心、距 O 的距离，以及悬挂于 O 时稳定静止状态下 OC 与铅垂向下的夹角。",["R_C=[5(0,0)+2(0.30,0.40)]/7=(0.6/7,0.8/7) m，长度 1/7 m。","稳定平衡要求重力作用线通过悬点，且势能最小。OC 在稳定情况下竖直向下，对下铅垂夹角为 0。","若初 OC 水平，则相对最低位势能较高，差为 Mg|OC|=g J。"]]]},{"number":41,"title":"施于刚体的力系的简化","page":218,"coverage":["滑移矢量","共点及平行力系","力偶","向指定点简化","中心轴"],"problems":[["共点斜撑的等效合力","共点力系·作用线","axis",["交点 P=(2","1)","F₁=(6","0)","F₂=(0","8)","F₃=(−2","−3)","参考点 O"],"三个共面力的作用线交于 P=(2,1) m，向量各为 (6,0)、(0,8)、(−2,−3) N。求合力、对 O 的力矩和经过 x 轴时的交点。",["各力沿各自作用线滑移至 P 后求和，R=(4,5) N，大小 √41 N。","对 O 力矩 τ=2×5−1×4=6 N·m。","沿 R 的作用线满足 5x−4y=6，与 x 轴交于 (1.2,0) m。"]],["三处平行轮载","平行力系·载荷中心","beam",["支点 O","载荷 x=1 m","载荷 x=3 m","载荷 x=5 m"],"梁上在 x=1、3、5 m 处分别有向下 30、60 N 和向上 20 N 的力。求合力、作用线及关于 x=2 m 处的力矩。",["向上为正，总力 −30−60+20=−70 N。","关于 O 逆时针为正，τ_O=−30−180+100=−110 N·m，作用线 x_R=τ_O/R=11/7 m。","取 x=2 m，τ₂=τ_O−2R=30 N·m，符号改变源于作用线位于参考点左侧。"]],["零合力仍有转动效应","力偶矩·平移不变性","beam",["A x=−0.5 m 向下","B x=1.0 m 向上","力 40 N","参考点 P"],"沿 y 方向的 +40 N 力施于 x=1.0 m，−40 N 施于 x=−0.5 m。求合力、对 O 和 P=(3,2) m 的力矩，并求把两力间距改成 2.0 m 时的等效力值。",["合力为零。τ_O=1×40+(−0.5)(−40)=60 N·m。","换点公式 τ_P=τ_O−(r_P×R)_z，R=0，故 τ_P=60 N·m。","等效力偶只要求净力零且力矩相同，间距 2.0 m 时各力应为 30 N，与原力偶同向。"]],["空间力系的中心轴","力与力偶·最短偏置","axis3",["x","y","z","合力 F=(0","0","10)","点 O 的总矩"],"力系在 O 简化为 R=(0,0,10) N 和 M_O=(4,−6,3) N·m。求离 O 最近的中心轴点、该点的剩余力矩，并判断能否简化为单一合力。",["令 r=(x,y,0)，r×R=(10y,−10x,0)。要求新矩只平行 R，令 10y=4、−10x=−6。","得最近轴点 (0.60,0.40,0) m，剩余力矩为 (0,0,3) N·m；整个中心轴与 z 平行。","平行 R 的力矩分量在取矩点平移时不变，故此例必须保留力偶。"]],["嵌入一个自由偶矩的梁","力系平移·等效作用线","beam",["A x=0","B x=2 m","上推 25 N","顺时针矩 15 N·m"],"在 A 有向下 10 N，在 B 有向上 25 N，自由力偶为顺时针 15 N·m。求在 A 的简化结果、单一等效合力的作用线和关于 B 的力矩。",["R_y=25−10=15 N。对 A，τ_A=2×25−15=35 N·m，逆时针。","平面力系可把力移至 x=35/15=7/3 m，使其自身力矩等于 35 N·m。","关于 B 的等效矩为 35−2×15=5 N·m，直接取矩也得 10×2−15=5 N·m。"]]]},{"number":42,"title":"刚体的平衡","page":222,"coverage":["平面平衡方程","支座反力","静摩擦","平衡稳定性","桁架"],"problems":[["均布载荷梁与斜索","支座反力·取矩","beam",["铰支座 A","梁长 4 m","杆中均布载荷合力","端点斜索 30°"],"水平梁长 4 m，左端铰支，右端索向左上方与水平夹 30°。梁自重 120 N 均布，另有 80 N 向下载荷在 x=3 m。求索张力及铰支两分力。",["绕左端取矩，4T sin30°−120×2−80×3=0，得 T=240 N。","水平平衡 Aₓ=T cos30°=120√3≈208 N，向右。","竖直平衡 Aᵧ=120+80−T sin30°=80 N，向上。"]],["光滑墙与粗糙地面的梯子","摩擦极限·倾角","ramp",["墙光滑","梯长 5 m","与地夹角 θ","人站 3 m"],"5 m 梯子重 200 N，人在距梯脚 3 m 处，重 500 N。顶端靠光滑墙，地面静摩擦因数 0.35。求 θ=60° 时的地面摩擦和不滑所需的最小倾角。",["地面支持 N=700 N，水平摩擦 f 等于墙反力 H。绕梯脚取矩，5H sinθ=(200×2.5+500×3)cosθ。","H=400 cotθ。60° 时 f≈231 N，低于极限 245 N。","临界 400 cotθ=245，即 θ_min=arctan(400/245)≈58.5°。"]],["带弹簧力矩的直立倒摆","势能二阶判据·临界刚度","pend",["下端铰 O","杆重心在上","偏角 θ","扭簧 κ"],"均匀杆质量 2 kg、长 1 m，下端铰支，绕直立位置有扭簧势能 κθ²/2，g=10 m/s²。求直立稳定的临界 κ，并在 κ=14 N·m/rad 时求 θ=0.10 rad 的合恢复力矩。",["U=Mg(L/2)cosθ+κθ²/2=10 cosθ+κθ²/2。U′(0)=0，U″(0)=κ−10。","κ>10 时线性稳定，κ\u003c10 不稳。κ=10 时二次项为零，但四次项 +10θ⁴/24 使直立仍为局部极小。","合矩 −U′=10sin0.10−14×0.10≈−0.402 N·m。"]],["对称三角桁架的杆力","节点法·拉压","truss",["A 铰","B 滚支","C 载荷 600 N","跨度 4 m 高 1.5 m"],"等腰三角铰接桁架 A=(0,0)、B=(4,0)、C=(2,1.5) m，C 受 600 N 竖直向下。A 为铰，B 为竖直滚支。求支座反力与三杆轴力。",["全架平衡给 Aₓ=0，Aᵧ=Bᵧ=300 N。斜杆长度 2.5 m，竖直方向余弦 0.6，水平为 0.8。","C 节点靠两斜杆提供向上分力，故各为压杆，大小 600/(2×0.6)=500 N。","A 节点斜杆水平分力向左 500×0.8=400 N，底杆 AB 必须向右拉，故为 400 N 拉力。"]],["高柜被水平推时的两种失稳","滑动·倾覆比较","plate",["柜宽 0.60 m","推力高度 1.20 m","质心居中","地面"],"质量 50 kg 的刚性柜，底宽 0.60 m，在高 1.20 m 处受水平推力 F。g=10 m/s²，静摩擦因数 0.30，质心在底面中心正上方。求临界推力和先发生的模式，并求 F=100 N 时支持力合力的偏心。",["静止时 N=500 N、f=F。滑动临界 F_slide=0.30×500=150 N。","支持力作用线相对底面中心的偏心 e=Fh/N；到达边缘 e=0.30 m 时 F_tip=125 N，因此先倾覆。","F=100 N 时 e=100×1.20/500=0.24 m，向受推方向偏移。"]]]},{"number":43,"title":"刚体的平动","page":230,"coverage":["平动的定义","各点位移速度加速度相同","曲线平动","绕质心力矩条件"],"problems":[["加速货舱中的平台平动","外力分布·零角加速度","beam",["左托点 A","右托点 B","质心 C","整体上加速"],"20 kg 刚性平台由两个仅竖直作用的托座平动上升，a=2 m/s²，g=10 m/s²。质心距左托座 1.2 m、距右托座 0.8 m。求两支持力，并给任意两点的速度差。",["平动动力学给 N_A+N_B=M(g+a)=240 N。","零角加速度要求绕质心合力矩零，即 0.8N_B=1.2N_A。解得 N_A=96 N，N_B=144 N。","刚体姿态恒定，各点位矢差恒定，因此速度差为零。"]],["过圆弧但不转向的平台","曲线平动·质心受力","bend",["导轨半径 2 m","平台姿态恒定","速度 v","质心 C"],"质量 15 kg 的平台保持姿态不变，其质心在水平圆弧半径 2 m 上运动，某时刻速率 3 m/s、切向加速度 0.8 m/s²。求平台上边角处的加速度、水平合力的切法分量及大小。",["曲线平动时角速度为零，任一点加速度等于质心加速度。aₜ=0.8、aₙ=v²/R=4.5 m/s²。","Fₜ=12 N，Fₙ=67.5 N，法向指圆心。","合力大小 √(12²+67.5²)≈68.6 N。相同的加速度不要求轨迹为直线。"]],["双电机推力平衡","纯平动条件·位移","plate",["上推点到 C 为 0.40 m","下推点到 C 为 0.60 m","质心 C","+x"],"60 kg 实验平台在水平面由两电机沿 +x 推动，上、下推力作用线相对质心 y=+0.40、−0.60 m，阻力 18 N 的作用线过 C。要求从静止 3 s 内始终纯平动加速到 6 m/s，求两恒推力和总功。",["a=2 m/s²，F上+F下−18=120。力矩平衡 −0.4F上+0.6F下=0。","解得 F上=82.8 N、F下=55.2 N。","位移 9 m，驱动功 138×9=1242 J，净功 1080 J，对应 60×6²/2。"]],["两绳牵引水平步进平台","约束与转动判别","beam",["质量 12 kg","两悬点跨度 2 m","质心居中","张力 T₁ T₂"],"水平平台由竖直双绳吊运，质量 12 kg、质心居中，两吊点间距 2 m，g=10 m/s²。某瞬时 T₁=70 N、T₂=50 N。判断此刻质心加速度与能否保持纯平动，并求保持同一质心加速度时两个张力应是多少。",["净竖直力 70+50−120=0，故质心加速度为零。","质心合力矩为 (50−70)×1=−20 N·m，若原来没有转动，此刻也将产生角加速度。","保持纯平动需满足总力仍为零且合力矩为零，故两绳各 60 N。"]],["平面椭圆搬运的边角轨迹","运动学·力的变化","ellipse",["质心椭圆","边角偏置 (0.30","0.20)","水平 x","水平 y"],"10 kg 平台无转动，质心 R=(2 cos t,sin t) m，角频率 1 rad/s。边角 A 相对质心偏置 (0.30,0.20) m。求 t=π/2 s 时 A 的位置、速度、加速度和水平合力。",["r_A=R+(0.30,0.20)，代入得 (0.30,1.20) m。","各点速度一致，v_A=(−2 sin t,cos t)=(−2,0) m/s。加速度为 (−2 cos t,−sin t)=(0,−1) m/s²。","水平合力 M R̈=(0,−10) N。A 点轨迹为同一椭圆平移后的结果。"]]]},{"number":44,"title":"刚体的定轴转动","page":233,"coverage":["角运动学","转矩方程","惯量积分和平行轴定理","惯量张量与主轴","功和动能","轴承反力与动平衡"],"problems":[["非均匀杆绕偏置轴","惯量积分·平行轴","beam",["杆长 2 m","O 端轴","线密度 λ=1+x","质心 C"],"长 2 m 的杆 λ=1+x（SI），绕过端点且垂直杆的固定轴。受恒力矩 19/3 N·m，自静止转过 2 rad。求质量、端轴惯量和末角速度。",["M=∫₀²(1+x)dx=4 kg，x_C=∫₀²x(1+x)dx/M=7/6 m。","I_O=∫₀²x²(1+x)dx=8/3+4=20/3 kg·m²。平行轴式给 I_C=20/3−4(7/6)²=11/9 kg·m²。","τΔθ=I_Oω²/2，故 ω=√(19/5)≈1.95 rad/s。"]],["带质量滑轮的悬重系统","定轴方程·角运动学","pulley",["左重 3 kg","右重 5 kg","R=0.20 m","I=0.12"],"3 kg 与 5 kg 重物由轻绳跨过半径 0.20 m、惯量 0.12 kg·m² 的滑轮，无滑动，g=10 m/s²。求两重物加速度、两侧张力、重物从静止运动 0.55 m 时滑轮的角速度。",["重端向下，5g−T₂=5a，T₁−3g=3a。滑轮 (T₂−T₁)R=I a/R。","a=(5−3)g/(8+I/R²)=20/11 m/s²，T₁=390/11≈35.45 N，T₂=450/11≈40.91 N。","v²=2a×0.55=2 m²/s²，ω=v/R=5√2 rad/s。"]],["三点质量构成的惯量主轴","惯量张量·非主轴转动","axis3",["x","y","z","质量在 (±1","±1","0)","第三质量在 O"],"质量均为 1 kg 的三个质点固连，位于 (1,1,0)、(−1,−1,0) 和原点（m）。求惯量矩阵、x–y 平面的主轴，并求以 ω=(2,0,0) rad/s 转动时的角动量和动能。",["Iₓₓ=Iᵧᵧ=2、Izz=4、Iₓᵧ=−Σmxy=−2，其余非对角元零。","(1,1,0)/√2 为主轴，主惯量 0；(1,−1,0)/√2 与 z 轴的主惯量均为 4 kg·m²。","L=Iω=(4,−4,0) kg·m²/s，K=ω·L/2=4 J。非主轴条件下 L 不与 ω 平行。"]],["偏心转子与轴承周期载荷","约束反力·静动配平","wheel",["轴 O","偏心质量 0.15 kg","偏心 0.08 m","反向加配重"],"水平盘轴上转子以 50 rad/s 匀速转动，一点偏心质量 0.15 kg 位于半径 0.08 m，盘的其余部分轴对称。试求未配平时轴承水平合反力幅度；若在同一轴向平面反向 0.12 m 加配重，求其质量，并说明不同轴向平面时还要满足什么。",["偏心质量的向心力幅值 mω²r=0.15×2500×0.08=30 N，由轴承施加给转子。","同平面要求 m_c r_c=m r=0.012 kg·m，得 m_c=0.10 kg。","不同轴向平面时，除 Σmᵢr⃗ᵢ=0 外，还需 Σmᵢzᵢr⃗ᵢ=0，抵消旋转惯性力的一阶力偶。单个异面配重通常无法同时消除两项。"]],["实心圆盘变矩制动","角位移积分·瞬时功率","wheel",["圆盘 M=8 kg","R=0.50 m","制动力矩随角度","初角速度"],"圆盘 M=8 kg、R=0.50 m，ω₀=8 rad/s，受到制动力矩 τ=−(4+2θ) N·m，θ 从制动起点计。求停止角和 θ=2 rad 时的角速度、瞬时制动功率。",["圆盘轴惯量 I=MR²/2=1 kg·m²，初 K=32 J。","力矩功 ∫₀^θτdθ=−4θ−θ²，令 32−4θ−θ²=0，得 θ_stop=4 rad。","θ=2 时剩 K=20 J，ω=√40 rad/s，制动矩 −8 N·m，功率约 −50.6 W。"]]]},{"number":45,"title":"刚体的平面平行运动","page":250,"coverage":["任意点运动","速度瞬心","滚动约束","平动加转动","平面动力学","滚动摩擦"],"problems":[["实心圆柱滚下粗糙斜面","静摩擦·纯滚动","ramp",["圆柱 M=4 kg","半径 0.20 m","坡角 30°","Δs=3 m"],"4 kg 实心圆柱在 30° 坡由静止纯滚动 3 m，R=0.20 m，g=10 m/s²。求加速度、静摩擦所需下限、终点平动及角速度。",["沿坡向下为正，Ma=Mg sinθ−f，Iα=fR，a=Rα，I=MR²/2。","得 a=(2/3)g sinθ=10/3 m/s²，f=Ma/2=20/3 N，向上；μ_s,min=f/(Mg cosθ)=1/(3√3)≈0.192。","v=√(2a×3)=√20 m/s，ω=v/R=5√20≈22.36 rad/s。"]],["滚轮上三点速度与加速度","瞬心·加速度分解","roll",["质心 C","接地点 A","最高点 B","滚向右 v"],"圆轮 R=0.25 m 在水平面无滑动向右匀速滚动，质心速率 2 m/s。求接地点 A、最高点 B、正右端 D 的瞬时速度，并求 A 的加速度。",["角速度大小 v/R=8 rad/s，顺时针。用 v_P=v_C+ω×r_P/C。","A 的旋转速度为向左 2，故 v_A=0；B 为向右 4 m/s；D 的速度为 (2,−2) m/s。","匀速纯滚没有角加速度，a_A=−ω²r_A/C=(0,16) m/s²。速度瞬心不是加速度为零的点。"]],["水平滚轮受顶部拉力","瞬时转矩·摩擦方向","roll",["顶部向右 F","质心 C","接地点 A","圆柱 R"],"质量 6 kg 的均匀实心滚轮顶部受水平向右 F=12 N，地面支持纯滚。求质心加速度、摩擦方向及大小。",["向右为正，顺时针角量取正。Ma=F+f，Iα=FR−fR 且 α=a/R。","I=MR²/2，故 Ma/2=F−f。与平动方程联立得 a=4F/(3M)=8/3 m/s²。","f=Ma−F=4 N，向右。若误以为摩擦必反向，会得到与无滑动条件冲突的加速度。"]],["圆柱纯滚后的阻力矩刹车","滚动摩擦·能量","roll",["圆柱 M=10 kg","R=0.40 m","滚阻矩 0.80 N·m","从 v₀=4 m/s"],"实心圆柱在水平地面由 4 m/s 纯滚，滚动阻力等效为恒阻力矩 0.80 N·m，其他阻力忽略，静摩擦足够。求停止距离、减速度及所需静摩擦。",["总动能 K=(1/2)(M+I/R²)v²=(3/4)Mv²，所以 K₀=120 J。","滚阻做功 −Mᵣs/R=−2s，停止距离 60 m。由 dK/ds=−2，得 a=−2/(1.5M)=−2/15 m/s²。","水平净力为静摩擦，f=Ma=−4/3 N，向后。接触处静摩擦不耗能。"]],["滑动杆两端的速度约束","平面运动·瞬时转动中心","wall",["竖直墙","杆长 5 m","A=(3","0)","B=(0","4)"],"长度 5 m 的刚杆，底端在水平地面 x=3 m，以 2 m/s 向外滑，顶端贴墙 y=4 m。求顶端速度、杆的角速度和质心速度，并给出瞬心位置。",["约束 x²+y²=25，微分得 ẏ=−x ẋ/y=−1.5 m/s。","杆从 A 到 B 的方向矢量 (−3,4)，相对速度 (−2,−1.5)=ω(−4,−3)，得 ω=0.50 rad/s 逆时针。","质心速度为端点平均 (1,−0.75) m/s，瞬心为过 A 竖线与过 B 水平线交点 (3,4) m。"]]]},{"number":46,"title":"刚体的定点运动","page":267,"coverage":["无外力矩定点运动","惯量主轴","回转对称重刚体与规则进动","两自由度回转体"],"problems":[["自由轴对称转子的体轴进动","无矩欧拉方程·体轴","gyro",["定点 O","对称轴 z","横向角速度","角动量 L"],"固定点处轴对称转子 I₁=I₂=2、I₃=5 kg·m²，外力矩为零，初 ω=(1,0,4) rad/s。求体轴中 ωₓ、ωᵧ、ω_z 的函数和转动动能。",["欧拉方程给 ω̇ₓ=−[(I₃−I₁)/I₁]ω_zωᵧ=−6ωᵧ，ω̇ᵧ=6ωₓ，ω̇_z=0。","故 ωₓ=cos6t，ωᵧ=sin6t，ω_z=4 rad/s。","K=(I₁(ωₓ²+ωᵧ²)+I₃ω_z²)/2=(2+80)/2=41 J，不随时间变化。"]],["快速重陀螺的进动","旋转对称重刚体·慢进动","gyro",["支点 O","质心 C","倾角 θ","竖直 z","自转轴"],"3 kg 对称陀螺支点至质心 0.06 m，I₃=0.012 kg·m²，自转 150 rad/s，轴与铅垂夹 30°，g=10 m/s²。在快速自转慢进动近似下求力矩、进动角速度和周期。",["重力矩大小 Mgℓsinθ=3×10×0.06×0.5=0.90 N·m。","L≈I₃ω₃=1.8 kg·m²/s，规则进动满足 |dL/dt|=ΩL sinθ。","Ω≈Mgℓ/L=1 rad/s，周期约 2π s。Ω/ω₃≈0.0067，满足这里的尺度分离。"]],["重陀螺的快慢进动根","规则进动·二次方程","gyro",["O","对称轴 e₃","倾角 60°","进动 Ω","实际轴分量 ω₃"],"对称重陀螺 I₁=0.060、I₃=0.020 kg·m²，Mgℓ=1.20 N·m，恒倾角 θ=60°，绕对称轴的实际角速度分量 ω₃=25 rad/s。求规则进动的两个 Ω，并比较慢根与快速自转近似。",["固定倾角时 ω=Ωe_z+(ω₃−Ωcosθ)e₃，L=I₁Ωe_z+(I₃ω₃−I₁Ωcosθ)e₃。","令 dL/dt=重力矩，得到 Ω(I₃ω₃−I₁Ωcosθ)=Mgℓ，即 0.030Ω²−0.50Ω+1.20=0。","两根约 2.91 与 13.76 rad/s。慢根近似 Mgℓ/(I₃ω₃)=2.40 rad/s，这组数据中近似有明显差距。"]],["两自由度万向框架的陀螺反矩","横向转矩·支座反力","gyro",["自转轴 e₃","框架转轴 +z","可倾转轴","反力矩"],"两自由度陀螺只可绕水平自转轴和竖直外框轴转动。转子角动量为 3eₓ kg·m²/s，外框此刻以 2e_z rad/s 转动，忽略框架惯量和自转轴额外分量。求维持指定转向所需转矩和支架所受反矩。",["角动量方向随框架转动，dL/dt=Ω×L=(2e_z)×(3eₓ)=6eᵧ N·m。","转子需要 +y 转矩，由限制第三转动自由度的支架提供。","转子对支架的反矩为 −6eᵧ N·m；若由间距 0.20 m 的轴承力偶承担，力偶中每力大小 30 N。"]],["中间主轴附近的定点转动","无矩运动·线性稳定性","axis3",["主轴 1","主轴 2","主轴 3","近轴 2 转动"],"定点无矩刚体主惯量为 (1,2,3) kg·m²，绕第 2 轴转动 Ω=6 rad/s。线性化求横向扰动 (u=ω₁,w=ω₃) 的方程、增长率及 e 倍时间。",["欧拉方程线性项为 u̇=(I₂−I₃)Ωw/I₁=−6w，ẇ=(I₁−I₂)Ωu/I₃=−2u。","于是 ü=12u，有 e^(±√12 t) 两支。一般扰动含增长支，故中间轴转动不稳定。","e 倍增长时间 1/√12≈0.289 s，结论适用于小扰动阶段。"]]]},{"number":47,"title":"单杠的“晚旋”","page":278,"coverage":["飞行中绕质心动量矩守恒","惯量积与角动量分量","姿态变化导致纵转"],"problems":[["对称姿态下的空翻","质心系·角动量与转动","twist",["身体纵轴 z","横轴 x","质心 C","初姿态对称"],"运动员脱手后，可将短时对称姿态等效为 Iₓ=12、I_z=3 kg·m²，惯量积为零。初绕横轴 ωₓ=4 rad/s，ω_z=0。重力为唯一外力。求绕质心的角动量、转动动能和 0.20 s 内的横翻角。",["重力作用线过质心，故绕质心外力矩为零。初角动量 L=48eₓ kg·m²/s，沿主轴。","姿态维持不变，纯主轴旋转给 K=Iₓωₓ²/2=96 J。","转角为 4×0.20=0.80 rad，此模型中无纵转。"]],["改变横纵惯量积后的瞬时角速","角动量矢量·耦合方程","twist",["横轴 x","纵轴 z","单侧举臂","惯量积项 Iₓz"],"在短促形变前后同一瞬时体轴近似重合，形变结束后相对肢体速度可忽略。形变前 Lₓ=40、L_z=0 kg·m²/s。新 x–z 惯量矩阵为 [[10,−2],[−2,4]] kg·m²。求形变后的 ωₓ、ω_z。",["绕质心外力矩为零，形变中角动量保持。新姿态使用 L=Iω。","联立 10ωₓ−2ω_z=40、−2ωₓ+4ω_z=0，得 ω_z=ωₓ/2，ωₓ=40/9、ω_z=20/9 rad/s。","纵轴角动量分量虽为零，非零惯量积使纵轴角速度可非零。"]],["用局部质点模型解释晚旋","惯量积分·符号反转","twist",["主躯干 Iₓₓ=8、Izz=2","两端质量 1 kg","位置 ±(0.5","0","1)"],"将运动员简化为质心在 O、Iₓₓ=8、Izz=2 kg·m² 的躯干，另有两个各 1 kg 的配重，在 ±(0.5,0,1) m。形变刚结束，Lₓ=20、L_z=0。求新的 x–z 惯量矩阵和 ω_z；若两点镜像为 ±(−0.5,0,1) 呢？",["两个配重的 Iₓₓ 增量为 Σmz²=2，Izz 增量为 Σmx²=0.5，Iₓz=−Σmxz=−1。","新矩阵 [[10,−1],[−1,2.5]]。由 L_z=0 得 ω_z=0.4ωₓ，由 Lₓ=20 得 ωₓ=25/12、ω_z=5/6 rad/s。","镜像只把非对角元变正，横向角速度不变，纵转变成 −5/6 rad/s。"]],["有限外角冲量下的误差估计","角动量守恒的适用条件","twist",["形变时段 0.08 s","质心 C","小外矩 0.6 N·m","轴 x z"],"形变历时 0.08 s，假设同一短时间内体轴方向变化可忽略。形变前 Lₓ=30、L_z=0，期间恒外力矩 0.60 N·m 沿 +z。形变结束后的 x–z 惯量矩阵为 [[8,−1],[−1,2]]。求 L_z 与 ω_z，并与忽略外矩时比较。",["角冲量 J_z=0.60×0.08=0.048 kg·m²/s，Lₓ 仍为 30。","解方程 8ωₓ−ω_z=30、−ωₓ+2ω_z=0.048，得 ω_z=(30+8×0.048)/15=2.0256 rad/s。","若忽略外矩，ω_z=2.0000 rad/s，差值 0.0256 rad/s。纵转主要来自惯量张量耦合。"]],["单侧姿态改变的转动能账","角动量约束·形变功","twist",["初对称 Iₓ=10","末 Iₓz=−1","质心 C","横翻与纵转"],"飞行时 L=(30,0,0) kg·m²/s。形变前 Iₓ=10 kg·m²，绕横轴旋转。形变瞬间两套体轴近似重合，形变后 x–z 矩阵 [[9,−1],[−1,3]]，肢体相对运动可忽略。求两态转动能和转动能变化。",["初 ωₓ=3 rad/s，K₀=L·ω/2=45 J。","新方程给 ω_z=ωₓ/3，ωₓ=45/13，ω_z=15/13 rad/s。","末 K=30×(45/13)/2=675/13≈51.92 J，较初态增加 90/13≈6.92 J。增加量可由肌肉内部做功提供，角动量守恒并不限定转动动能。"]]]}]},{"number":7,"title":"振动与波","sections":[{"number":48,"title":"一个自由度的振动","page":285,"coverage":["简振动","欠阻尼与临界阻尼","外驱动稳态","共振","谐波分析与频谱"],"problems":[["用非零初速度启动简谐振子","初值·相位与能量","spring",["弹簧 k=18 N/m","质点 m=2 kg","初位置 x₀","初速度 v₀"],"质量 2 kg、劲度 18 N/m，初位移 0.10 m、速度 −0.60 m/s。求 x(t)、振幅、初相及第一次过平衡的时间和速度。",["ω₀=√(k/m)=3 rad/s，x=0.10 cos3t−0.20 sin3t。","写成 A cos(3t+φ)，A=√(0.10²+0.20²)=√0.05 m，φ=arctan2。","首次过平衡 3t+φ=π/2，t≈0.155 s，此时 v=−3A≈−0.671 m/s。总能 kA²/2=0.45 J。"]],["从衰减峰值反求阻尼和刚度","欠阻尼·对数减量","osc",["第 1 峰 8 cm","第 3 峰 2 cm","间隔 4 s","衰减包络"],"1 kg 振子的第一和第三个同向峰值依次为 8、2 cm，间隔 4 s。采用 m ẍ+b ẋ+kx=0。求 β=b/(2m)、阻尼周期、k 和品质因数 Q=ω₀/(2β)。",["同向峰值比由包络给出 2/8=e^(−4β)，故 β=ln4/4≈0.347 s⁻¹，b≈0.693 kg/s。","两周期共 4 s，T_d=2 s，ω_d=π rad/s。ω₀²=ω_d²+β²，k≈9.99 N/m。","Q≈3.16/0.693≈4.56。振幅每周期衰减一半，同相位能量每周期约剩四分之一。"]],["临界阻尼的回零尺度","临界与过阻尼·初值","osc",["位移 x₀=0.10 m","临界衰减","时间 t","1% 阈值"],"2 kg 滑块连 k=50 N/m 的弹簧，从 x₀=0.10 m 静止释放。求临界阻尼系数、临界响应与 t=1 s 时相对初始位移比例。比较 b=24 kg/s 时的两个指数率。",["ω₀=5 rad/s，临界 b_c=2mω₀=20 kg/s。临界解 x=(A+Bt)e^(−5t)，初值给 A=0.10、B=0.50。","x(1)/x₀=6e^(−5)≈0.0404。临界解单调回零，无穿越。","b=24 时 β=6，根 −6±√11 s⁻¹，慢根约 −2.68 s⁻¹，长时回零比临界情况慢。"]],["稳态受迫振子的幅相和耗散","受迫响应·振幅共振","spring",["振子 m=1 kg","弹簧 k=16 N/m","阻尼 b=2","驱动力 6 cos3t"],"m=1 kg、k=16 N/m、b=2 kg/s，受 F=6 cos3t N。求稳态振幅、滞后相位、平均耗散功率及振幅共振频率。",["稳态 x=A cos(ωt−δ)，A=6/√[(16−9)²+(2×3)²]=6/√85≈0.651 m，δ=arctan(6/7)≈40.6°。","平均耗散功率 b〈v²〉=bω²A²/2=324/85≈3.81 W，也等于一周期平均输入。","对幅值分母关于 ω 求极小，ω_r=√(k/m−b²/(2m²))=√14 rad/s。"]],["两次谐波驱动的谱线响应","谐波分析·线性叠加","spectrum",["直流 1 N","基频 2 rad/s","二次谐波 4 rad/s","三根谱线"],"线性振子 m=1 kg、k=16 N/m、b=1 kg/s，驱动力 F=1+3 cos2t+2 cos4t N。求稳态位移的直流和各频率幅相、平均耗散功率。再写出周期 π s、峰值 ±2 N 的奇对称方波的首两条非零谐波。",["直流位移 1/16 m。各谐波按 A=F₀/√[(k−mω²)²+(bω)²] 独立响应，δ=atan2(bω,k−mω²)。","2 rad/s 项 A₂=3/√148、δ₂=arctan(1/6)；4 rad/s 项 A₄=1/2 m、δ₄=π/2。把三项相加即 x(t)。","交叉项在共同周期 π s 上平均为零。平均耗散 (4A₂²+16A₄²)/2≈2.12 W。","令方波首半周期为正，正弦系数 bₙ=(2/π)∫₀^π F(t)sin(2nt)dt。偶数 n 项为零，奇数 n 项为 8/(nπ) N。首两条非零项为 (8/π)sin2t 和 (8/3π)sin6t。"]]]},{"number":49,"title":"谐振动的合成","page":304,"coverage":["同向同频","同向异频与拍","同频正交椭圆","异频正交利萨如图"],"problems":[["同频分量合成为单一振动","相量·初值核对","phase",["分量 A₁=0.04 m","分量 A₂=0.03 m","相差 90°","合相量"],"同方向 x₁=0.04 cos(5t) m、x₂=0.03 cos(5t+π/2) m。求合振幅、初相、初速度和首次达到负极值时刻。",["复相量 C=0.04+0.03i，A=|C|=0.05 m，φ=arctan(3/4)≈0.644 rad。","x=0.05 cos(5t+φ)，v(0)=−0.05×5 sinφ=−0.15 m/s。","首次负极值满足 5t+φ=π，t≈0.500 s。"]],["两音叉的拍与剩余振幅","同向异频·不等幅拍","osc",["频率 240 Hz 与 244 Hz","两包络谷","谷值仍非零","时间 t"],"同一点叠加 2 mm、1 mm 两正弦振动，频率分别 240、244 Hz，初相均零。求拍频、最大最小包络以及第一次包络谷的时刻。",["载频附近的慢包络可由复振幅模求得 A(t)=√[2²+1²+2×2×1 cos(2π×4t)] mm。","最大 3 mm，最小 1 mm，峰间隔 1/4 s，拍频 4 Hz。","首个包络谷满足 2π×4t=π，t=0.125 s，较小分量不能完全抵消较大分量。"]],["正交同频振动的倾斜椭圆","消去参数·旋向","ellipse",["横振幅 3","纵振幅 2","相位差 π/3","起点"],"x=3 cos(4t) cm，y=2 cos(4t+π/3) cm。求轨迹方程、t=0 的速度方向及封闭面积。",["利用 y/2=(x/3)cosδ−sin(4t)sinδ，消去 sin(4t)，得 (x/3)²+(y/2)²−2(x/3)(y/2)cosδ=sin²δ=3/4。","t=0 位于 (3,1) cm，vₓ=0，vᵧ=−8sin(π/3)\u003c0，所以在最右点向下，顺时针。","由圆的线性变换，面积 πAB|sinδ|=3√3π cm²。"]],["频率为一比二的正交轨迹","利萨如图·闭合周期","lissa",["横向 ω","纵向 2ω","交点 O","轨迹双瓣"],"x=2 cos t cm，y=sin2t cm。求轨迹隐式方程、完整参数周期及经过原点时的两个速度。",["cos t=x/2，y=2 sin t cos t=x sin t，故 y²=x²(1−x²/4)，|x|≤2 cm（将厘米数值代入）。","两个分量周期分别 2π、π s，完整周期 2π s。","t=π/2、3π/2 时经过原点，v=(−2 sin t,2 cos2t)，分别为 (−2,−2) 和 (2,−2) cm/s。"]],["同向基频与二倍频的极值","同向异频·波形展形","osc",["基频 cos t","二次项 0.5 cos2t","极大与谷值","完整周期"],"x=cos t+0.5 cos2t cm，求一个周期内的全部驻点和全局峰谷，判断把合成振动写成单一正弦是否准确。",["ẋ=−sin t−sin2t=−sin t(1+2cos t)。在 [0,2π) 驻点为 0、2π/3、π、4π/3 s。","逐点代入 x=1.5、−0.75、−0.50、−0.75 cm，因此全局最大 1.5 cm、最小 −0.75 cm，π 处为较小的局部峰。","两项频率不同且幅值非零；不对称的峰谷以及多出的驻点均体现两条频谱成分。"]]]},{"number":50,"title":"两个自由度的振动","page":314,"coverage":["耦合方程","广义特征值","简正模","频率分裂","初值叠加"],"problems":[["对称双振子突然释放","简正坐标·初值分解","coupled",["左墙 k","小块 m₁","耦合 κ","小块 m₂","右墙 k"],"两块各 1 kg，各由 k=9 N/m 弹簧连到固定墙，中间耦合 κ=8 N/m。初 x₁=0.10 m、x₂=0，两速度为零。求简正频率和全时刻两位移。",["运动方程 ẍ₁=−17x₁+8x₂、ẍ₂=8x₁−17x₂。","取 q₊=(x₁+x₂)/2、q₋=(x₁−x₂)/2，频率为 √9=3 与 √25=5 rad/s，两模初幅均为 0.05 m。","x₁=0.05(cos3t+cos5t)，x₂=0.05(cos3t−cos5t)，单位 m。"]],["不等质量的简正模","质量矩阵·振型比","coupled",["m₁=1 kg","m₂=2 kg","三弹簧 k=6 N/m","固定端"],"两质量 1、2 kg，左右及中间弹簧均为 6 N/m。求两固有角频率与对应 x₂/x₁，并判断哪个为同相振型。",["K=[[12,−6],[−6,12]] N/m，M=diag(1,2) kg。令 λ=ω²，det(K−λM)=2λ²−36λ+108=0。","λ=9±3√3 s⁻²，因此 ω约为 1.95 与 3.77 rad/s。","首行给 x₂/x₁=(12−λ)/6，低频比为 (1+√3)/2>0，高频比为 (1−√3)/2\u003c0。"]],["从频谱反推耦合弹簧","频率反演·储能","coupled",["等质量 0.5 kg","端簧 k","耦合 κ","同相及反相"],"两质量均 0.50 kg，左右端弹簧相同 k，中间为 κ。测得同相、反相模角频率分别 4、6 rad/s。求 k、κ；若反相位移峰值为 ±0.08 m，求模态能量。",["同相时中簧不伸长，mω₊²=k=0.5×16=8 N/m。反相时 mω₋²=k+2κ=18，故 κ=5 N/m。","达极值时速度零，边簧总能 kA²，中簧能 κ(2A)²/2。","总能 (k+2κ)A²=18×0.08²=0.1152 J。"]],["弱耦合系统的能量交换","模态拍·慢时间尺度","coupled",["左块初偏 A","右块初静止","ω₊=10","ω₋=10.4"],"两个对称振子从静止释放，初偏移 (A,0)，测得 ω₊=10、ω₋=10.4 rad/s。写出慢包络形式，求 x₁ 包络第一次为零时刻和右块包络。",["等幅激发两模，x₁=A[cos10t+cos10.4t]/2=A cos10.2t cos0.2t。","x₂=A[cos10t−cos10.4t]/2=A sin10.2t sin0.2t。","x₁ 第一处包络零 t=π/0.4≈7.85 s，此时 x₂ 包络为 A。弱耦合下能量近似在两振子间交换，精确瞬时能量还含速度和耦合弹簧项。"]],["两个等长小摆的线性耦合","小角近似·模态角速度","pend2",["双摆长 L","两摆球 m","水平弹簧 κ","偏角 θ₁ θ₂"],"两个悬点等高的小摆长 0.40 m、球质量各 0.20 kg，两球用水平弹簧 κ=1.10 N/m 相连，g=10 m/s²。求两模频率及反相模下当 θ₁=0.10 rad、θ₂=−0.10 rad 且速度为零时的总势能。",["小角下 x≈Lθ。方程 θ̈₁+(g/L)θ₁+(κ/m)(θ₁−θ₂)=0，第二式交换下标。","同相 ω₊=√(g/L)=5 rad/s；反相 ω₋=√(g/L+2κ/m)=6 rad/s。","重力势能近似 mgLθ²=0.008 J，弹簧势能 κ(2Lθ)²/2≈0.00352 J，总能约 0.01152 J。"]]]},{"number":51,"title":"一维波的形成","page":318,"coverage":["绳上的波","固体横波和弹性介质纵波","谐波解析式","能流密度和波强"],"problems":[["受脉冲驱动的绳波","传播延时·介质速度","wave",["激励端 x=0","绳长方向 +x","脉冲向右","测点 x=2 m"],"绳的张力 40 N、线密度 0.10 kg/m，端点在 0≤t≤0.20 s 按 y₀=0.02 sin(5πt) m 驱动，其他时刻为零，绳足够长。求右行波、脉冲长度和 x=2 m 处首次峰值时刻。",["小斜率下 T dyₓ 的差产生横向力，波速 c=√(T/μ)=20 m/s。","右行解 y(x,t)=y₀(t−x/c)，仅当 0≤t−x/c≤0.20 s 非零，脉冲占长 4 m。","x=2 m 处第一峰满足 t−2/20=0.10，故 t=0.20 s，峰高 0.02 m。"]],["钢样品中的体波测速","固体横纵波·弹性常数","slab",["发射端","接收端间距 0.78 m","纵波先至","横波后至"],"均匀各向同性固体 ρ=7800 kg/m³，体波纵波与横波在 0.78 m 上测得飞行时间分别 0.130、0.250 ms。求两波速、剪切模量 G 与体积模量 K。再求同种材料制成细长杆时的长波纵波速度。",["c_L=0.78/0.000130=6000 m/s，c_T=0.78/0.000250=3120 m/s。","体波关系 c_T²=G/ρ，得 G≈75.9 GPa。","c_L²=(K+4G/3)/ρ，故 K≈280.8−101.2=179.6 GPa。这里采用三维体纵波关系。","同材料的杨氏模量 E=9KG/(3K+G)≈199.9 GPa。细杆长波纵波近似 c杆=√(E/ρ)≈5.06 km/s。"]],["气柱中的位移与压强","纵波·声压与强度","wave",["粒子位移 ξ","传播 +x","压缩与稀疏","波长 λ"],"平面声波 ξ=A cos(ωt−kx)，A=2.0 μm，f=500 Hz，空气 ρ=1.2 kg/m³、c=340 m/s。求波长、最大质点速度、声压幅和平均声强。",["λ=c/f=0.68 m，ω=1000π rad/s，速度幅 uₘ=ωA≈0.00628 m/s。","p′=−ρc²∂ξ/∂x，右行波等价 p′=ρc u，故 pₘ=ρcuₘ≈2.56 Pa。","平均声强 〈p′u〉=ρc uₘ²/2≈8.05×10⁻³ W/m²。"]],["行波在两点的相位差","解析式·传播方向","wave",["测点 A x=0","测点 B x=0.30 m","传播 +x","相位滞后"],"右行谐波频率 8 Hz，速率 4 m/s，x=0 处 y=0.03 cos(16πt+π/6) m。求波函数、x=0.30 m 处的相位滞后及 t=0 该处的质点横向速度。",["λ=4/8=0.50 m，k=2π/λ=4π rad/m。y=0.03 cos(16πt−4πx+π/6) m。","B 对 A 相位滞后 4π×0.30=1.2π rad，对应传播时间 0.075 s。","vᵧ=−0.03×16π sin(π/6−1.2π)≈−0.158 m/s。"]],["绳波的瞬时能流","弦微元功率·平均功率","wave",["振幅 2 cm","波速 12 m/s","频率 6 Hz","能流 +x"],"右行弦波振幅 0.02 m，线密度 0.25 kg/m，速度 12 m/s，频率 6 Hz。求张力、瞬时横截面功率公式、平均功率和 3 s 运送的能量。",["T=μc²=36 N，ω=12π rad/s，k=π rad/m。取 y=A cos(ωt−kx)。","某截面向右传出的功率 P=−T yₓ yₜ=T kωA² sin²(ωt−kx)，恒非负。","平均功率 μcω²A²/2≈0.853 W。3 s 恰含 18 周期，能量约 2.56 J。"]]]},{"number":52,"title":"一维波传播的一些问题","page":330,"coverage":["特性阻抗","反射与透射","驻波","多普勒效应","色散与群速"],"problems":[["不同线密度绳的接头反射","阻抗·幅值与功率","slab",["轻绳 μ₁=0.10","重绳 μ₂=0.40","同张力接头","反射和透射"],"两绳张力均为 40 N，线密度分别 0.10、0.40 kg/m，从轻绳发出振幅 6 mm 的小振幅波。求位移反射与透射振幅、相位变化及功率分配。",["c₁=20、c₂=10 m/s，Z=μc 给 Z₁=2、Z₂=4 kg/s。接头位移与横向力连续，得 r=(Z₁−Z₂)/(Z₁+Z₂)=−1/3，t=1+r=2/3。","反射振幅 2 mm 且反相，透射振幅 4 mm 且同相。","功率比 R=r²=1/9，T=(Z₂/Z₁)t²=8/9，和为 1。"]],["一端固定一端自由的绳","反射相位·驻波节点","standing",["固定端 x=0","自由端 x=L","最低模","第三模"],"绳长 1.2 m，波速 24 m/s，左端固定、右端自由。求头三阶频率，列出第三阶模的全部节点和腹点。",["固定端 y(0)=0，取空间因子 sin kx；自由端 yₓ(L)=0，故 kL=(2n−1)π/2。","f_n=(2n−1)c/(4L)，为 5、15、25 Hz。第三阶 k=5π/(2L)。","节点 x=0、2L/5、4L/5，即 0、0.48、0.96 m；腹点 x=L/5、3L/5、L，即 0.24、0.72、1.20 m。"]],["声源与观察者先相向后远离","多普勒·符号选择","doppler",["声源 f₀=700 Hz","声速 340","观察者","速度箭头"],"介质静止，声源以 20 m/s 与观察者 10 m/s 在同一直线上相向运动，越过后继续各自运动。源频 f₀=700 Hz、c=340 m/s。求接近与远离时的接收频率和两侧波长。",["接近时源前方波长 λ前=(c−20)/f₀=320/700 m，观察者迎向波峰，遇峰速率 c+10。","f近=700×350/320≈765.6 Hz。远离时源后方 λ后=(c+20)/f₀=360/700 m，观察者相对遇峰速率 c−10。","f远=700×330/360≈641.7 Hz。波长由源相对介质速度决定。"]],["弱色散波包的群速","两近邻波·相位和包络","packet",["包络","载波","k₁=3.9","k₂=4.1","沿 +x"],"色散关系 ω=2k+0.25k²（SI），同幅叠加 k₁=3.9、k₂=4.1 rad/m，两波均向 +x。求载波相速、包络群速、相邻包络峰间距。",["记均值 k̄=4、ω̄=(11.6025+12.4025)/2=12.0025，差量 Δk=0.2、Δω=0.8。","和化积得 y=2A cos[(Δkx−Δωt)/2] cos(k̄x−ω̄t)。载波相速 ω̄/k̄≈3.001 m/s，群速 4 m/s，也等于 dω/dk 在 k̄ 处的值。","取包络绝对值，相邻峰相位差 π，间距 2π/Δk≈31.4 m。"]],["测量驻波中的节点深度","部分反射·驻波比","standing",["入射振幅 5 mm","驻波腹","驻波谷","负反射端"],"右行波振幅 5 mm，终端反射位移系数 r=−0.60。波长 0.80 m，取终端 x=0，绳在 x≤0。求振幅最大最小值、首个腹状峰离终端的距离和被终端接收的功率比例。",["复振幅因子为 5(e^(ikx)−0.6e^(−ikx)) mm。幅值极大为 5(1+0.6)=8 mm，极小为 5(1−0.6)=2 mm，无真正的节点。","终端 x=0 为极小，首次极大相距 λ/4=0.20 m。","反射功率比 |r|²=0.36，在无其他损失模型下终端接收 0.64。"]]]},{"number":53,"title":"空间波","page":346,"coverage":["波面","波前和波射线","惠更斯原理","衍射","反射和折射"],"problems":[["平面波的法向与等相位面","波矢·波面","wavefront",["等相位波面","波矢 k=(3","4)","波射线","投影轴"],"平面谐波 u=A cos(3x+4y−100t)，空间以米计。求波长、相速、波射线方向，以及坐标 (0,0) 与 (1,1) m 同时刻的相位差。",["波矢 k=(3,4) rad/m，|k|=5，波长 2π/5≈1.257 m。","等相位面 3x+4y=100t+常数，波射线沿法向单位矢量 (0.6,0.8)，相速 100/5=20 m/s。","两点空间相位差 7 rad，模 2π 后为 0.717 rad。"]],["惠更斯子波与折射角","波面重构·折射定律","interface",["介质 1 c₁=4","介质 2 c₂=3","入射法线角 45°","折射波前"],"平面水波从波速 4 m/s 水域进到波速 3 m/s 水域，入射法线角 45°，周期 1 s。用等时子波构图关系求折射角、两侧波长及沿界面相邻相位峰间距。",["同一时间内两介质子波半径为 c₁Δt、c₂Δt，除以公共界面投影长度，得 sinθ₂/sinθ₁=c₂/c₁。","sinθ₂=0.75/√2≈0.5303，θ₂≈32.0°。频率连续，λ₁=4 m，λ₂=3 m。","沿界面的波数分量相等，峰间距 λ₁/sin45°=4√2≈5.66 m。"]],["两间距下的狭缝衍射","惠更斯叠加·首暗纹","slit",["入射平面波","狭缝宽 a","屏距 L","首暗纹 θ"],"波长 0.60 mm 的平面波照射均匀矩形狭缝，缝宽 3.0 mm，远场屏距 2.0 m。求第一暗纹角和中心主极大宽。若缝宽减至 0.50 mm，第一暗纹是否仍存在？",["远场中对称配对子波，第一暗纹满足 a sinθ=λ，得 θ=arcsin0.2≈11.54°。","屏上一侧距离 L tanθ≈0.408 m，中央宽约 0.816 m。","缝宽 0.50 mm 时 λ/a=1.2>1，传播方向内不存在 a sinθ=λ 的解，衍射扩展至较宽角域。"]],["斜入射的反射波矢","界面相位连续·反射","interface",["水平反射面 y=0","入射 k=(6","−8)","法线 +y","反射"],"波速 5 m/s 的介质占 y>0，入射波波矢为 (6,−8) rad/m，水平边界全反射。求反射波矢、入射角、波长和角频率。",["沿界面的相位匹配保留 kₓ=6。反射仍在同一介质，|k| 不变且反向离面，故 kᵣ=(6,8) rad/m。","入射与法线的锐角 θ=arctan(6/8)≈36.87°，反射角相同。","|k|=10，λ=2π/10≈0.628 m，ω=c|k|=50 rad/s。"]],["球面波的到时与强度衰减","球面波前·能量通量","wavefront",["球面源 O","同心球面 r₁=2 m","r₂=5 m","径向射线"],"无吸收介质中点状声源各向同性发出 12 W，声速 300 m/s。求距源 2、5 m 的波强、位移振幅之比和波前到时差。",["球面波前面积 4πr²，I=P/(4πr²)。两处强度分别 3/(4π)≈0.239 W/m²、3/(25π)≈0.0382 W/m²。","介质与频率相同，I∝A²，故 A₂/A₁=r₁/r₂=0.40。","射线径向传播，到时差 (5−2)/300=0.010 s。"]]]},{"number":54,"title":"波的干涉","page":351,"coverage":["波的叠加","相干和相位差","强度和干涉条纹","全息照相的记录与重建"],"problems":[["未知初相的两源干涉","相位差·强度","interference",["S₁ 初相 0","S₂ 初相 π/2","到 P 路径差","观测 P"],"两相干标量波位移幅度均 2 mm，波长 0.40 m。写 yᵢ=A cos(ωt−krᵢ+φᵢ)，φ₂−φ₁=π/2。P 点 r₂−r₁=0.30 m。求相差、合幅和相对单源强度。",["δ=φ₂−φ₁−k(r₂−r₁)=π/2−2π×0.30/0.40=−π。","合幅 A合=2A|cos(δ/2)|=0。","I/I₀=2+2cosδ=0。完全相消依赖在 P 处等幅且相干，初相与路程差都进入相位关系。"]],["两扬声器不等强的干涉条纹","强度叠加·可见度","interference",["S₁ 强度 9","S₂ 强度 4","观察点 P","相位 δ"],"两相干波在屏上各自强度 I₁=9、I₂=4 W/m²，偏振或振动方向一致。求干涉强度函数、极值和可见度，并计算 δ=π/3 时强度。",["线性叠加位移，再对平方求平均，交叉项为 2√(I₁I₂)cosδ。","I=13+12cosδ W/m²，Imax=25、Imin=1。可见度 (25−1)/(25+1)=12/13≈0.923。","δ=π/3 时 I=19 W/m²，单独强度之和 13 W/m²。"]],["双缝测波长与薄片位移","路程差·条纹平移","slit",["双缝相距 d","屏距 L","中央亮纹","插入单侧薄片"],"相干光双缝间距 0.40 mm，距屏 1.60 m，测得相邻亮纹相隔 2.4 mm。求波长。将折射率 1.50、厚 4.8 μm 的薄片贴到一条缝上，求条纹移动量。若换成同间距、每缝宽 0.10 mm 的均匀多缝，哪些非零主极大逢单缝衍射极小？",["小角下 Δy=λL/d，故 λ=(2.4×10⁻³)(0.40×10⁻³)/1.60=600 nm。","薄片增添光程 (n−1)h=2.4 μm，等于 4λ。","要恢复原级次，下游几何路径差须抵消这段增量，亮纹整体向有薄片的缝一侧移动 4×2.4=9.6 mm。","多缝峰条件为 d sinθ=mλ，单缝极小为 a sinθ=nλ（n≠0），合并得 m=(d/a)n=4n，故第 ±4、±8 等非零倍数级消失（只取实际可达的角度）。"]],["全息记录的空间条纹频率","物光与参考光·记录项","holo",["记录面","参考光 θᵣ=0°","物光 θₒ=30°","条纹周期"],"波长 633 nm，参考平面波垂直入射记录面，物光在同一平面内以 30° 入射。两者振幅相等。求记录条纹间距、每毫米条纹数，并写出保存相位信息的项。",["记录强度 I=|R+O|²=|R|²+|O|²+R*O+RO*。后两项携带物光与参考光的相对相位。","平行记录面的波数差为 k(sin30°−sin0)=k/2，条纹间距 Λ=2λ=1.266 μm。","线密度约为 1000/1.266≈790 条/mm，强度在等幅时从 0 变到单束强度的 4 倍。"]],["换波长照明离轴全息片","重建方向·共轭级次","holo",["记录条纹 Λ=2 μm","入射参考 +z","一级出射","共轭级次"],"透射型全息片局部等效为间距 Λ=2.0 μm 的弱正弦条纹，重建光垂直入射。分别用 600 nm、500 nm 照明，求两种情况下的一级出射角；解释为何同时有零级及共轭一级。",["记录面平行动量匹配给 k sinθ_m=m(2π/Λ)，故 ±1 级满足 sinθ=±λ/Λ。","600 nm 时 θ≈±17.46°，500 nm 时 θ≈±14.48°。","记录强度的常数项给直通零级，两个互为共轭的交叉项给正负空间频率，分别重建物光项和共轭项。"]]]}]}];
+function escapeText(text) {
+  return String(text).replace(/[&<>"']/g, character => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  })[character]);
+}
+
+function draw(problem, id) {
+  const [title, , type, labels] = problem;
+  const out = [];
+  const ink = "#254e81";
+  const pale = "#7a95b2";
+  const hot = "#9c450c";
+  const fill = "#dceaf8";
+  const line = (x1, y1, x2, y2, color = ink, extra = "") =>
+    out.push(`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${color}" ${extra}/>`);
+  const path = (d, color = ink, inside = "none", extra = "") =>
+    out.push(`<path d="${d}" stroke="${color}" fill="${inside}" ${extra}/>`);
+  const dash = (x1, y1, x2, y2) => line(x1, y1, x2, y2, pale, 'stroke-dasharray="4 5"');
+  const rect = (x, y, w, h, inside = fill, color = ink) =>
+    out.push(`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="2" fill="${inside}" stroke="${color}"/>`);
+  const circle = (x, y, r, inside = "#fff", color = ink) =>
+    out.push(`<circle cx="${x}" cy="${y}" r="${r}" fill="${inside}" stroke="${color}"/>`);
+  const oval = (x, y, rx, ry, color = ink, tilt = 0) =>
+    out.push(`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" stroke="${color}" fill="none" transform="rotate(${tilt} ${x} ${y})"/>`);
+  const arrow = (x1, y1, x2, y2, color = hot) =>
+    line(x1, y1, x2, y2, color, `marker-end="url(#arrow-${color === hot ? "hot" : "ink"}-${id})"`);
+  const spring = (x, y, length) => {
+    const step = (length - 20) / 12;
+    let d = `M${x} ${y}h10`;
+    for (let i = 0; i <= 12; i++) {
+      d += `L${(x + 10 + i * step).toFixed(2)} ${i === 12 ? y : y + (i % 2 === 0 ? -9 : 9)}`;
+    }
+    path(d + "h10");
+  };
+  const wave = (x, y, width, height, periods, shape, color = ink) => {
+    const pieces = [];
+    for (let i = 0; i <= 120; i++) {
+      const t = i / 120;
+      const v = shape ? shape(t) : Math.sin(periods * 2 * Math.PI * t);
+      pieces.push(`${i === 0 ? "M" : "L"}${(x + t * width).toFixed(1)} ${(y + height * v).toFixed(1)}`);
+    }
+    path(pieces.join(" "), color);
+  };
+  const ground = (x1, x2, y) => {
+    line(x1, y, x2, y);
+    for (let x = x1 + 5; x < x2 - 4; x += 12) line(x, y + 1, x - 6, y + 8, pale);
+  };
+  let points = [];
+
+  switch (type) {
+    case "pulse":
+      arrow(44, 123, 327, 123, ink); arrow(47, 126, 47, 24, ink);
+      path("M63 123 175 44 289 123Z", ink, fill); dash(175, 44, 175, 123);
+      points = [[31,27],[326,139],[64,140],[175,140],[289,140],[197,40]];
+      break;
+    case "axis": case "axis3":
+      arrow(52, 115, 319, 115, ink); arrow(81, 133, 81, 22, ink);
+      if (type === "axis3") arrow(81, 115, 42, 143, ink);
+      circle(81, 115, 3, ink);
+      if (id === "27-1") {
+        arrow(81,115,185,64,ink); arrow(185,64,257,44); dash(185,64,185,115);
+      } else if (id === "26-2") {
+        arrow(81,115,183,115,ink); arrow(183,115,139,115); arrow(183,115,183,46);
+      } else if (type === "axis3") {
+        arrow(81,115,214,83,ink); arrow(81,115,125,41); oval(141,98,55,21,pale,-12);
+      } else {
+        path("M91 114Q160 34 291 62", pale, "none", 'stroke-dasharray="5 4"');
+        arrow(138,91,212,58,ink); arrow(212,58,278,95); arrow(212,58,211,34);
+      }
+      points = [[316,130],[64,23],[151,101],[230,45],[278,111]];
+      break;
+    case "track": case "belt":
+      ground(42,310,112);
+      if (type === "belt") {
+        path("M75 105H284a12 12 0 0 1 0 23H75a12 12 0 0 1 0-23Z", ink, fill);
+        circle(76,117,8); circle(282,117,8); rect(128,81,40,24); arrow(195,97,256,97);
+        if (id === "39-3") rect(134,65,28,16,"#fff");
+      } else {
+        rect(105,83,46,29); arrow(151,96,231,96); dash(272,65,272,112);
+        if (id === "28-5") {spring(42,98,63); spring(232,98,78);line(305,69,305,112)}
+        if (id === "26-5" || id === "30-5") arrow(105,90,53,90);
+        if (id === "37-5") circle(268,100,11,fill);
+      }
+      points = [[121,67],[227,75],[272,135],[65,136]];
+      break;
+    case "binary":
+      dash(48,94,313,94); circle(100,94,17,fill); circle(260,94,21,fill);
+      if (/弹簧|两块|储能|滑块中的|同加速度/.test(title + labels.join("")) && !/碰撞|斜碰/.test(title)) spring(118,94,120);
+      else line(117,94,239,94,pale);
+      if (id === "35-1") {oval(167,94,120,35,pale);arrow(100,75,126,58);arrow(260,116,231,132)}
+      else if (id === "38-3") { arrow(100,76,100,35);arrow(260,117,260,145); }
+      else {arrow(100,65,150,65);arrow(260,56,id === "35-4" || id === "37-1" ? 208 : 302,56);}
+      circle(171,94,3,ink);
+      points = [[100,119],[260,123],[175,41],[174,116]];
+      break;
+    case "vertical":
+      line(188,24,188,139,pale,'stroke-dasharray="4 5"'); rect(172,69,32,27);
+      arrow(188,68,188,30); arrow(188,96,188,136);
+      if (id === "31-2") {ground(105,265,136);path("M169 136v-4l36-6-36-6 36-6-36-6 36-6");}
+      if (id === "33-2") line(188,69,188,18,ink);
+      points = [[157,80],[229,44],[228,102],[226,132]];
+      break;
+    case "bend": case "orbit": case "wheel": case "roll": case "loop": case "ellipse": case "scatter":
+      if (type === "bend") {
+        path("M47 126H157A107 107 0 0 0 264 19",ink);
+        path("M48 134H157A115 115 0 0 0 272 19",pale);
+        dash(157,19,157,126);dash(157,19,264,19);
+        circle(236,92,7,fill); arrow(240,81,271,42);
+        points = [[62,104],[291,28],[143,68],[216,94],[158,20]];
+      } else if (type === "roll") {
+        ground(61,304,134);circle(175,84,50,fill);circle(175,84,3,ink);
+        line(175,84,175,134,pale);circle(175,134,3,hot);arrow(177,31,253,31);
+        path("M120 66a60 60 0 0 1 29-32",hot);
+        points = [[176,18],[158,83],[163,145],[251,81]];
+      } else if (type === "loop") {
+        ground(39,320,132);circle(192,80,51);
+        path("M53 24Q84 32 99 77T192 131",pale);line(192,80,236,54,pale);
+        circle(236,54,5,hot);circle(192,80,3,ink);arrow(236,54,265,91);
+        points = [[67,29],[207,88],[201,21],[247,117]];
+      } else if (type === "scatter") {
+        dash(42,44,289,44);path("M42 44Q146 44 203 57Q244 66 302 111");
+        arrow(46,44,92,44);circle(173,118,6,ink);dash(173,118,173,51);
+        circle(191,54,5,fill);line(173,118,191,54,pale);
+        points = [[68,29],[151,74],[173,139],[205,92]];
+      } else {
+        const isEllipse = type === "ellipse";
+        const tilted = id === "49-3";
+        const rx = isEllipse ? 106 : 59;
+        const ry = isEllipse ? 43 : 59;
+        oval(172,79,rx,ry,ink,tilted ? -25 : 0);
+        if (type === "orbit" && /终半径|到 r|收|扰动/.test(labels.join(""))) oval(172,79,35,35,pale);
+        dash(58,79,300,79);dash(172,17,172,138);
+        const centre = id === "34-2" ? 125 : 172;
+        circle(centre,79,3,ink);line(centre,79,isEllipse ? 258 : 215,isEllipse ? 54 : 38,pale);
+        circle(isEllipse ? 258 : 215,isEllipse ? 54 : 38,5,fill);
+        arrow(216,39,254,75);
+        if (type === "wheel") {line(172,79,117,69,pale);line(172,79,201,129,pale)}
+        points = id === "34-2" ? [[125,96],[71,63],[279,80],[260,42]] : [[171,97],[218,24],[133,53],[270,72]];
+      }
+      break;
+    case "projectile": case "path":
+      arrow(43,127,323,127,ink); arrow(53,132,53,21,ink);
+      if (type === "projectile") {
+        path("M54 125Q170 -39 292 125"); dash(173,43,173,125);arrow(173,43,233,43);
+        if (id === "36-2") path("M173 43Q219 50 242 125M173 43Q284 55 309 125",pale,"none",'stroke-dasharray="5 4"');
+        points = [[173,29],[230,28],[270,140],[319,140]];
+      } else {
+        path("M53 127Q196 124 270 39");path("M53 127H270V39",pale,"none",'stroke-dasharray="4 5"');
+        circle(270,39,4,hot);points = [[41,139],[290,33],[193,93],[271,140]];
+      }
+      break;
+    case "ramp": {
+      path("M50 131H309V36Z",ink,fill); ground(50,309,131);
+      out.push('<g transform="rotate(-20 193 72)"><rect x="174" y="62" width="37" height="25" rx="2" fill="#fff" stroke="#254e81"/></g>');
+      if (id === "45-1") circle(189,63,17,"#fff");
+      arrow(197,47,258,26); arrow(190,76,190,116); dash(91,117,267,52);
+      points = [[86,121],[113,87],[172,62],[258,44]];
+      break;
+    }
+    case "spring": case "coupled":
+      ground(47,312,117);line(53,56,53,116);
+      spring(53,88,type === "coupled" ? 67 : 111);rect(type === "coupled" ? 120 : 164,73,35,31);
+      if (type === "coupled") {spring(155,88,67);rect(222,73,34,31);spring(256,88,49);line(305,56,305,116);}
+      else {arrow(199,88,271,88);dash(167,32,167,136);}
+      points = type === "coupled" ? [[72,65],[139,58],[187,70],[239,58],[291,69]] : [[106,65],[184,60],[264,73],[166,136]];
+      break;
+    case "well": case "osc":
+      arrow(47,121,322,121,ink); arrow(62,137,62,20,ink);
+      if (type === "well") {path("M69 25Q109 161 171 69Q192 36 211 69Q259 156 307 25");dash(87,67,288,67);points=[[126,118],[191,43],[257,118],[279,62]];}
+      else {
+        dash(63,72,312,72);
+        const response = id === "48-3" ? t => -(1 + 7*t) * Math.exp(-7*t) :
+          t => -Math.cos((id === "49-5" ? 2 : 3.2)* 2*Math.PI*t) * (id === "48-2" ? Math.exp(-2.3*t) : 0.83);
+        wave(64,72,242,41,3,response);
+        if (id === "48-2") wave(64,72,242,41,0,t=>-Math.exp(-2.3*t),pale);
+        points=[[84,27],[155,42],[307,138],[245,65]];
+      }
+      break;
+    case "wall":
+      if (id === "45-5") {
+        ground(75,311,133);line(76,28,76,133);line(76,44,257,131);
+        circle(76,44,5,hot);circle(257,131,5,hot);dash(76,44,257,44);dash(257,44,257,131);
+        points=[[55,69],[162,73],[281,129],[60,41]];
+      } else {
+        ground(58,300,130);line(104,23,104,130);arrow(207,91,111,57);
+        arrow(111,57,206,36);circle(107,56,5,fill);dash(105,57,167,57);
+        points=[[84,28],[183,91],[217,40],[83,115]];
+      }
+      break;
+    case "pend": case "pend2": case "gyro": case "twist":
+      if (type === "pend" || type === "pend2") {
+        ground(79,273,32);
+        const inverted=id === "42-3";
+        const yPivot=inverted?129:32;
+        const yMass=inverted?50:112;
+        line(149,yPivot,191,yMass);
+        dash(149,yPivot,149,yMass);circle(149,yPivot,4,ink);circle(191,yMass,12,fill);
+        if (type === "pend2") {line(223,32,256,112);circle(223,32,4,ink);circle(256,112,12,fill);spring(202,112,43);}
+        else if (!inverted) {oval(149,113,18,14,pale);arrow(69,112,130,112);}
+        points=[[139,yPivot+12],[201,yMass-20],[103,yMass-4],[226,yMass+13]];
+      } else if (type === "gyro") {
+        path("M145 134h68m-59 0 25-20 25 20",ink,fill);
+        dash(179,115,179,18);arrow(179,115,260,29,ink);
+        oval(220,70,41,12,ink,42);oval(178,43,50,12,pale);
+        circle(203,90,5,fill);arrow(203,90,203,123);
+        points=[[164,114],[207,86],[192,48],[164,22],[269,35]];
+      } else {
+        circle(175,38,13,fill);path("M175 51V99m0 0-24 37m24-37 23 37m-23-71-38 10m38-10 36-43");
+        dash(175,57,175,136);arrow(116,81,233,81,ink);arrow(175,93,175,20,ink);
+        oval(175,83,60,22,pale);circle(175,81,5,hot);
+        points=[[243,82],[187,23],[157,93],[213,34]];
+      }
+      break;
+    case "beam": case "truss": case "plate":
+      if (type === "truss") {
+        path("M67 115 172 36 279 115Z",ink,fill);arrow(172,17,172,33);path("M67 115 55 133h24ZM279 115l-10 15h20Z");
+        points=[[51,145],[298,145],[191,34],[172,132]];
+      } else if (type === "plate") {
+        rect(83,52,171,65);
+        if (id === "40-2") circle(209,82,19,"#f2f7fd");
+        else {circle(170,82,4,ink);arrow(48,65,81,65);}
+        if (id === "42-5") ground(62,275,118);
+        points=[[92,38],[209,82],[279,65],[75,132]];
+      } else {
+        rect(53,81,253,13);path("M65 94 54 114h22ZM288 94l-11 20h22Z");
+        if (id === "41-3") {arrow(114,57,114,79);arrow(239,79,239,35);}
+        else if (id === "42-1") {arrow(143,30,143,78);arrow(238,44,238,78);arrow(305,81,254,25);}
+        else {arrow(139,41,139,79);arrow(235,41,235,79);}
+        circle(175,87,3,ink);
+        points=[[53,132],[137,29],[233,29],[288,131]];
+      }
+      break;
+    case "pulley":
+      circle(172,53,34,fill);circle(172,53,4,ink);line(138,53,138,103);line(206,53,206,116);
+      rect(125,104,26,24);rect(191,116,30,25);
+      points=[[113,115],[237,123],[202,32],[164,43]];
+      break;
+    case "wave": case "standing": case "packet": case "spectrum": case "phase": case "lissa":
+      arrow(49,122,320,122,ink);arrow(56,131,56,22,ink);dash(57,78,314,78);
+      if (type === "spectrum") {
+        [65,154,239].forEach((x,i)=>{line(x,122,x,122-[28,79,53][i]);circle(x,122-[28,79,53][i],3,hot);});
+        points=[[75,87],[165,38],[251,65],[285,138]];
+      } else if (type === "phase") {
+        arrow(92,109,231,109,ink);arrow(231,109,231,41,ink);arrow(92,109,231,41);
+        points=[[153,125],[250,76],[211,92],[165,65]];
+      } else if (type === "lissa") {
+        let d = "";
+        for (let i = 0; i <= 100; i++) {const t=i/100*2*Math.PI;d+=`${i?"L":"M"}${(177+110*Math.cos(t)).toFixed(1)} ${(77+42*Math.sin(2*t)).toFixed(1)}`;}
+        path(d);circle(177,77,4,hot);
+        points=[[286,76],[169,27],[192,78],[89,99]];
+      } else {
+        const shape = type === "packet" ? t=>Math.sin(16*Math.PI*t)*Math.sin(Math.PI*t)**2 :
+          type === "standing" ? t=>Math.sin((id === "52-2" ? 2.5 : 4)*Math.PI*t) :
+          id === "51-1" ? t=>t<0.53?-Math.sin(Math.PI*t/0.53):0 : undefined;
+        wave(59,78,246,35,2.5,shape);
+        if (type === "standing" || type === "packet") wave(59,78,246,35,0,t=>-(shape(t) || 0),pale);
+        arrow(220,26,299,26);
+        points=[[48,44],[141,29],[269,42],[301,138]];
+      }
+      break;
+    case "interface": case "slab":
+      if (id === "51-2") {
+        rect(59,37,241,87,"#e7f0f9",pale);
+        rect(60,50,11,60,fill);rect(289,50,11,60,fill);
+        arrow(77,59,283,59,ink);arrow(77,99,283,99);
+        wave(99,59,90,11,3,undefined,ink);wave(99,99,112,12,3,undefined,hot);
+        points=[[51,36],[306,36],[231,48],[232,109]];
+        break;
+      }
+      if (id === "52-1") {
+        dash(40,82,318,82);line(175,48,175,117,pale);circle(175,82,4,ink);
+        wave(50,82,125,24,1.15);wave(175,82,135,14,2.3,undefined,hot);
+        arrow(60,34,136,34,ink);arrow(139,114,70,114);arrow(194,34,265,34,ink);
+        points=[[50,55],[307,44],[175,123],[146,121]];
+        break;
+      }
+      rect(42,79,277,57,fill,pale);line(42,79,319,79);
+      dash(179,19,179,140);arrow(110,31,178,78);arrow(179,79,id === "53-4" ? 248 : 220,id === "53-4" ? 29 : 126,ink);
+      points=[[70,52],[269,103],[161,56],[237,119]];
+      break;
+    case "slit": case "interference": case "holo":
+      if (type === "holo") {
+        line(232,29,232,131);for(let j=37;j<=127;j+=8)line(224,j,239,j,pale);
+        arrow(61,111,230,79);arrow(58,79,230,79,ink);
+        if (id === "54-5") {arrow(235,79,302,39);arrow(235,79,302,119);arrow(235,79,302,79,ink)}
+        points=[[221,23],[72,66],[93,107],[264,95]];
+      } else {
+        line(291,25,291,132);
+        if (type === "slit") {line(103,25,103,55);line(103,69,103,92);line(103,105,103,132);}
+        circle(104,62,4,ink);circle(104,98,4,ink);
+        line(104,62,289,57);line(104,98,289,57);
+        dash(106,80,291,80);circle(289,57,5,hot);
+        points=[[83,56],[83,107],[204,81],[309,59]];
+      }
+      break;
+    case "wavefront": case "doppler":
+      if (type === "wavefront" && id === "53-1") {
+        for (let j=0;j<5;j++) line(37+j*46,45,137+j*46,120,pale);
+        arrow(130,115,196,27);
+        arrow(48,126,99,126,ink);
+        points=[[236,113],[204,27],[156,54],[81,140]];
+      } else {
+        for (let j=22;j<=100;j+=18) oval(142,77,j,j*0.60,pale);
+        circle(142,77,6,fill);arrow(148,77,292,77);circle(281,77,7,ink);
+        if (type === "doppler") arrow(298,53,256,53,ink);
+      }
+      if (!points.length) points=[[142,96],[183,36],[276,94],[302,51]];
+      break;
+    default:
+      throw new Error(`未知示意图类型 ${type}`);
+  }
+
+  labels.forEach((label, index) => {
+    const point = points[index];
+    if (!point) return;
+    const [x,y] = point;
+    circle(x,y,7.2,"#fff","#9c6b40");
+    out.push(`<text x="${x}" y="${y+2.9}" fill="${hot}" stroke="none" font-family="system-ui" font-size="8.4" font-weight="750" text-anchor="middle">${index+1}</text>`);
+  });
+  const marker = (kind,color) => `<marker id="arrow-${kind}-${id}" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 6 3 0 6Z" fill="${color}"/></marker>`;
+  const key = labels.map((label, index) => `<span><b>${index+1}</b>${escapeText(label)}</span>`).join("");
+  return `<figure><svg viewBox="0 0 360 153" role="img" aria-label="${escapeText(title + "示意图")}"><defs>${marker("hot",hot)}${marker("ink",ink)}</defs><g stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round">${out.join("")}</g></svg><figcaption>${key}</figcaption></figure>`;
+}
+
+const sections = chapters.flatMap(chapter => chapter.sections.map(section => ({ ...section, chapter })));
+const byNumber = new Map(sections.map(section => [section.number, section]));
+const navigation = document.querySelector("#navigation");
+const sheet = document.querySelector("#sheet");
+const search = document.querySelector("#search");
+const sidebar = document.querySelector("#sidebar");
+const menu = document.querySelector("#menu");
+const doneCount = document.querySelector("#total-done");
+const storageKey = "liang-mechanics-advanced-workbook:progress:v1";
+const validIds = new Set(sections.flatMap(section => section.problems.map((_, i) => `${section.number}-${i+1}`)));
+let done = new Set();
+try {
+  const saved = JSON.parse(localStorage.getItem(storageKey) || "[]");
+  if (Array.isArray(saved)) done = new Set(saved.filter(id => validIds.has(id)));
+} catch {
+  // The exercises remain usable if storage is unavailable.
+}
+
+navigation.innerHTML = chapters.map(chapter => `
+  <details class="chapter-nav" data-chapter="${chapter.number}">
+    <summary>第${"四五六七"[chapter.number-4]}章　${escapeText(chapter.title)}</summary>
+    <nav aria-label="第${chapter.number}章节次">
+      ${chapter.sections.map(section => `<a class="section-link" href="#s${section.number}"><span>§${section.number}</span><span>${escapeText(section.title)}</span></a>`).join("")}
+    </nav>
+  </details>`).join("");
+
+function readRoute() {
+  const match = /^#s(\d+)(?:-p([1-5]))?$/.exec(location.hash);
+  return { section: byNumber.get(Number(match?.[1])) ?? sections[0], problem: Number(match?.[2]) || null };
+}
+
+function renderProblem(section, index, open = false) {
+  const problem = section.problems[index];
+  const [title, topics, , , statement, steps] = problem;
+  const id = `${section.number}-${index+1}`;
+  const finished = done.has(id);
+  return `
+    <details class="exercise" id="p${id}"${open ? " open" : ""}>
+      <summary>
+        <span class="number">${id}</span>
+        <div><h3>${escapeText(title)}<span class="checkmark"${finished ? "" : " hidden"}>已完成</span></h3><span class="topics">${escapeText(topics)}</span></div>
+        <span class="chev" aria-hidden="true"></span>
+      </summary>
+      <div class="problem-body">
+        <div class="problem-grid">
+          <div><p class="problem-meta">题目</p><p class="statement">${escapeText(statement)}</p></div>
+          ${draw(problem,id)}
+        </div>
+        <details class="answer">
+          <summary>参考解答</summary>
+          <ol>${steps.map(step => `<li>${escapeText(step)}</li>`).join("")}</ol>
+        </details>
+        <div class="actions"><button class="done" type="button" data-id="${id}" aria-pressed="${finished}">${finished ? "取消完成标记" : "标记完成"}</button></div>
+      </div>
+    </details>`;
+}
+
+function updateNavigation(section, searching) {
+  navigation.querySelectorAll(".section-link").forEach(link => {
+    if (!searching && link.hash === `#s${section.number}`) {
+      link.setAttribute("aria-current","location");
+      link.closest("details").open = true;
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
+  doneCount.textContent = String(done.size);
+}
+
+function render() {
+  const { section, problem } = readRoute();
+  const query = search.value.trim().toLocaleLowerCase();
+  updateNavigation(section, Boolean(query));
+
+  if (query) {
+    const words = query.split(/\s+/).filter(Boolean);
+    const results = sections.flatMap(entry => entry.problems.flatMap((item, index) => {
+      const searchable = [entry.number, `${entry.number}-${index+1}`, entry.title, entry.chapter.title, item[0], item[1], item[4]].join(" ").toLocaleLowerCase();
+      return words.every(word => searchable.includes(word)) ? [{ entry, index }] : [];
+    }));
+    sheet.innerHTML = `
+      <header class="section-head"><h2>搜索结果</h2><p role="status">找到 ${results.length} 道题</p></header>
+      ${results.length
+        ? results.map(({ entry,index }) => `<p class="result-section">§${entry.number} ${escapeText(entry.title)}</p>${renderProblem(entry,index)}`).join("")
+        : '<p class="empty">没有匹配的题目。可以试试节号或知识点名称。</p>'}`;
+    return;
+  }
+
+  const at = sections.indexOf(section);
+  const prev = sections[at-1];
+  const next = sections[at+1];
+  sheet.innerHTML = `
+    <header class="section-head">
+      <p>第${"四五六七"[section.chapter.number-4]}章　${escapeText(section.chapter.title)}　·　教材第 ${section.page} 页起</p>
+      <h2>§${section.number}　${escapeText(section.title)}</h2>
+      <ul class="coverage" aria-label="知识点">${section.coverage.map(tag => `<li>${escapeText(tag)}</li>`).join("")}</ul>
+    </header>
+    ${section.problems.map((_,i) => renderProblem(section,i,i === (problem ?? 1)-1)).join("")}
+    <nav class="pagination" aria-label="前后节次">
+      ${prev ? `<a href="#s${prev.number}">← §${prev.number}　${escapeText(prev.title)}</a>` : "<span></span>"}
+      ${next ? `<a href="#s${next.number}">§${next.number}　${escapeText(next.title)} →</a>` : ""}
+    </nav>`;
+}
+
+function navigateToSection() {
+  search.value = "";
+  render();
+  const { section, problem } = readRoute();
+  const target = problem ? document.getElementById(`p${section.number}-${problem}`) : sheet;
+  target?.scrollIntoView({block:"start"});
+}
+function closeMobileMenu() {
+  sidebar.dataset.open = "false";
+  menu.setAttribute("aria-expanded","false");
+}
+
+search.addEventListener("input", render);
+menu.addEventListener("click", () => {
+  const open = sidebar.dataset.open !== "true";
+  sidebar.dataset.open = String(open);
+  menu.setAttribute("aria-expanded", String(open));
+});
+document.addEventListener("click", event => {
+  const link = event.target.closest('a[href^="#s"]');
+  if (!link || !/^#s\d+$/.test(link.hash) || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+  event.preventDefault();
+  if (location.hash !== link.hash) history.pushState(null,"",link.hash);
+  closeMobileMenu();
+  navigateToSection();
+});
+sheet.addEventListener("click", event => {
+  const button = event.target.closest("button[data-id]");
+  if (!button) return;
+  const id = button.dataset.id;
+  if (done.has(id)) done.delete(id);
+  else done.add(id);
+  try { localStorage.setItem(storageKey,JSON.stringify([...done])); } catch { /* In-memory state still works. */ }
+  const finished = done.has(id);
+  button.setAttribute("aria-pressed",String(finished));
+  button.textContent = finished ? "取消完成标记" : "标记完成";
+  button.closest(".exercise").querySelector(".checkmark").hidden = !finished;
+  doneCount.textContent = String(done.size);
+});
+window.addEventListener("hashchange", navigateToSection);
+render();
+if (/^#s\d+/.test(location.hash)) requestAnimationFrame(() => {
+  const { section, problem } = readRoute();
+  (problem ? document.getElementById(`p${section.number}-${problem}`) : sheet)?.scrollIntoView();
+});
+
+</script>
+</body>
+</html>
